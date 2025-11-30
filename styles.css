@@ -86,6 +86,10 @@
       color: var(--glitch-cyan-lite);
     }
 
+    .section {
+      padding: 40px 20px;
+    }
+
     .sections {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -107,6 +111,13 @@
       background: #0E1418;
     }
 
+    h2{
+      color: var(--toxic-cyan);
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 2px dashed #333;
+    }
+
     .panel h2 {
       color: var(--toxic-cyan);
       font-size: 22px;
@@ -123,6 +134,13 @@
 
         .panel .h2 a:hover {
       border-bottom: 1px solid var(--toxic-cyan);
+    }
+
+    h3{
+      color: var(--error-magenta);
+      font-size: 18px;
+      margin-bottom: 8px;
+
     }
 
     .panel p {
