@@ -208,7 +208,9 @@
 /* COMP card grid */
 .comp-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  /* fixed compact card width, max 4 per row; extra items wrap to new rows */
+  grid-template-columns: repeat(4, 240px);
+  justify-content: right;
   gap: 16px;
   margin-top: 18px;
 }
@@ -231,4 +233,17 @@
 @media (max-width: 600px) {
   .comp-card { padding: 12px; }
   main.container { margin-right: 0; }
+}
+
+/* Responsive comp-grid column fallbacks */
+@media (max-width: 1200px) {
+  .comp-grid { grid-template-columns: repeat(3, 240px); }
+}
+@media (max-width: 900px) {
+  .comp-grid { grid-template-columns: repeat(2, 220px); }
+  .toc-container { display: none; }
+  main.container { margin-right: 0; }
+}
+@media (max-width: 480px) {
+  .comp-grid { grid-template-columns: 1fr; }
 }

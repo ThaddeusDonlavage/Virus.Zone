@@ -5,15 +5,40 @@
       "chipCapacity": 8,
       "threadCount": 1,
       "cacheSize": 3,
-      "batteryLife": "18 hours"
+      "batteryLife": "4 hours"
     },
     {
-      "name": "Vertex Laptop (Vertex Glidebook S1)",
+      "name": "Civiclink Authority (Vertex Glidebook S1)",
       "description": "An ultra portable, high-performance laptop favored by professionals. Surprisingly sturdy.",
       "chipCapacity": 7,
       "threadCount": 1,
       "cacheSize": 3,
       "batteryLife": "24 hours"
+    },
+    {
+      "name": "Antiqua Tablet — Old World Model T-1",
+      "description": "A wizard's tome disguised as a tablet computer. Its archaic OS is a haven for dormant spirits.",
+      "chipCapacity": 4,
+      "threadCount": 2,
+      "cacheSize": 3,
+      "batteryLife": "12 hours"
+    },
+    {
+      "name": "Vertex Systems ArcSlate Pro — A-3 Pro Tablet",
+      "description": "Intended for graphic designers and artists, this high-end tablet is best used with a stylus and specialized software.",
+      "chipCapacity": 11,
+      "threadCount": 1,
+      "cacheSize": 2,
+      "batteryLife": "7 hours"
+    },
+    {
+      "name": "Mechane Sunvault Mobile Workstation — Mechane Type-X Brain Box",
+      "description": "An ancient laptop that has stubbornly refused to die. Favored by specialists who work in the field.",
+      "chipCapacity": 2,
+      "threadCount": 2,
+      "cacheSize": 3,
+      "batteryLife": "36 hours"
     }
+
 ]
 

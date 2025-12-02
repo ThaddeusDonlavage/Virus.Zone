@@ -1,6 +1,6 @@
 [
     {
-      "name": "Walk-Man Portable Music Player",
+      "name": "Antiqua Portable CD Player — Globe Chaser X1",
       "description": "It doesn’t look like much, but the damn thing doesn’t quit. Spirits like the familiar rhythm.",
       "chipCapacity": 2,
       "threadCount": 1,
@@ -8,7 +8,7 @@
       "batteryLife": "Unlimited"
     },
     {
-      "name": "Obama Phone (CivicLink Model O-1)",
+      "name": "CivicLink Model — O-1 (Obama Phone)",
       "description": "Issued freely to ensure digital inclusion. Notorious for running too hot when pushed.",
       "chipCapacity": 4,
       "threadCount": 1,
@@ -27,8 +27,33 @@
       "name": "Mechane Cellular — Mechane Type-4 Handset",
       "description": "Blessed by the minor machine-spirits of the workshop. It never quite dies. Rugged, tinker-friendly.",
       "chipCapacity": 5,
-      "threadCount": 2,
+      "threadCount": 1,
       "cacheSize": 2,
       "batteryLife": "18 hours"
+    },
+    {
+        "name": "ScarFix Duet — Handheld Gaming \"Friend\"",
+        "description": "A beloved retro handheld gaming device. Favored by the summoning community.",
+        "chipCapacity": 3,
+        "threadCount": 2,
+        "cacheSize": 1,
+        "batteryLife": "5 hours"
+    },
+    {
+        "name": "Woden SpectraGlass AR Visor",
+        "description": "A failed consumer AR device that found a second life through the Veil. Incredibly dorky to wear.",
+        "chipCapacity": 3,
+        "threadCount": 1,
+        "cacheSize": 2,
+        "batteryLife": "12 hours"
+    },
+    {
+        "name": "Scarfix Super Pocket Guardian — Handheld Gaming \"Pet\"" ,
+        "description": "A virtual pet COMP that never goes away. Popular with nostalgic adults.",
+        "chipCapacity": 7,
+        "threadCount": 1,
+        "cacheSize": 0,
+        "batteryLife": "9 days"
     }
+
 ]
