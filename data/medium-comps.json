@@ -1,0 +1,19 @@
+[
+    {
+      "name": "Banana Split Personal Laptop (Bananaware ProPad)",
+      "description": "A student favorite. Cheap to buy; impossible to keep repaired.",
+      "chipCapacity": 8,
+      "threadCount": 1,
+      "cacheSize": 3,
+      "batteryLife": "18 hours"
+    },
+    {
+      "name": "Vertex Laptop (Vertex Glidebook S1)",
+      "description": "An ultra portable, high-performance laptop favored by professionals. Surprisingly sturdy.",
+      "chipCapacity": 7,
+      "threadCount": 1,
+      "cacheSize": 3,
+      "batteryLife": "24 hours"
+    }
+]
+

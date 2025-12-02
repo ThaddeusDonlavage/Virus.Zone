@@ -1,0 +1,18 @@
+[
+    {
+      "name": "Scarfix Professional Home PC — Scarfix Tower Mk. 3",
+      "description": "Popular with classrooms and hobbyist demonologists.",
+      "chipCapacity": 6,
+      "threadCount": 2,
+      "cacheSize": 4,
+      "batteryLife": "0"
+    },
+    {
+      "name": "Vertex Server (Vertex Pinnacle X2)",
+      "description": "Banned from several countries for ‘excessive emissions.’",
+      "chipCapacity": 10,
+      "threadCount": 3,
+      "cacheSize": 5,
+      "batteryLife": "0"
+    }
+]

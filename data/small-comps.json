@@ -1,0 +1,34 @@
+[
+    {
+      "name": "Walk-Man Portable Music Player",
+      "description": "It doesn’t look like much, but the damn thing doesn’t quit. Spirits like the familiar rhythm.",
+      "chipCapacity": 2,
+      "threadCount": 1,
+      "cacheSize": 1,
+      "batteryLife": "Unlimited"
+    },
+    {
+      "name": "Obama Phone (CivicLink Model O-1)",
+      "description": "Issued freely to ensure digital inclusion. Notorious for running too hot when pushed.",
+      "chipCapacity": 4,
+      "threadCount": 1,
+      "cacheSize": 1,
+      "batteryLife": "48 hours"
+    },
+    {
+      "name": "Banana-Phone (Mobile) — Bananaware B-2 Flex",
+      "description": "Shaped like a joke. Not treated like one. Foldable, runs on rechargeable biocells.",
+      "chipCapacity": 6,
+      "threadCount": 1,
+      "cacheSize": 2,
+      "batteryLife": "10 hours"
+    },
+    {
+      "name": "Mechane Cellular — Mechane Type-4 Handset",
+      "description": "Blessed by the minor machine-spirits of the workshop. It never quite dies. Rugged, tinker-friendly.",
+      "chipCapacity": 5,
+      "threadCount": 2,
+      "cacheSize": 2,
+      "batteryLife": "18 hours"
+    }
+]

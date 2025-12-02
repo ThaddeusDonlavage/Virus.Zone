@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../styles.css">
     <script src="../load-header.js"></script>
+     <script src="../scripts/comps-render.js"></script>
   <script src="../auto-toc.js"></script>
   <title>VIRUS.ZONE — Page Title</title>
 </head>
@@ -29,76 +30,26 @@
         <p><strong>Cache Size: </strong> Sets the maximum number of die that can be stored within the cache.</p>
         <p><strong>Thread Count: </strong> Provides the number of Called Actions that can be performed per turn. COMPs with more than 1 Thread are considered fairly powerful.</p>
         <p><strong>Battery Life: </strong> Indicates how long the COMP can operate before needing a recharge or battery replacement.</p>
+        <p><strong>Size: </strong> There are three main types of size, which controls gameplay. <strong>Small</strong> COMPs cannot be directly targetted in combat while in an entities inventory.<strong>Medium</strong> Can be kept in a bag or backpack, but can be targetted <strong>Large</strong> COMPs provide a -2 penalty to all moves while actively in the inventory, and otherwise must be placed seperately.</p>
 
         <h2>COMP Models</h2>
 
-        <div class="comp-grid" aria-label="COMP models grid">
-          <div class="comp-card">
-            <h3>Walk-Man Portable Music Player</h3>
-            <p>It doesn’t look like much, but the damn thing doesn’t quit. Spirits like the familiar rhythm.</p>
-            <ul class="comp-features">
-              <li><span>Chip Capacity</span><span class="comp-badge">2</span></li>
-              <li><span>Thread Count</span><span class="comp-badge">1</span></li>
-              <li><span>Cache Size</span><span class="comp-badge">1</span></li>
-              <li><span>Battery Life</span><span class="comp-badge">Unlimited</span></li>
-            </ul>
-          </div>
+        <h3>Small COMPs</h3>
 
-          <div class="comp-card">
-            <h3>Obama Phone (CivicLink Model O-1)</h3>
-            <p>Issued freely to ensure digital inclusion. Notorious for running too hot when pushed.</p>
-            <ul class="comp-features">
-              <li><span>Chip Capacity</span><span class="comp-badge">4</span></li>
-              <li><span>Thread Count</span><span class="comp-badge">1</span></li>
-              <li><span>Cache Size</span><span class="comp-badge">1</span></li>
-              <li><span>Battery Life</span><span class="comp-badge">48 hours</span></li>
-            </ul>
-          </div>
-
-          <div class="comp-card">
-            <h3>Banana-Phone (Mobile) — Bananaware B-2 Flex</h3>
-            <p>Shaped like a joke. Not treated like one. Foldable, Runs on rechargeable biocells.</p>
-            <ul class="comp-features">
-              <li><span>Chip Capacity</span><span class="comp-badge">6</span></li>
-              <li><span>Thread Count</span><span class="comp-badge">1</span></li>
-              <li><span>Cache Size</span><span class="comp-badge">2</span></li>
-              <li><span>Battery Life</span><span class="comp-badge">10 hours</span></li>
-            </ul>
-          </div>
-
-          <div class="comp-card">
-            <h3>Mechane Cellular — Mechane Type-4 Handset</h3>
-            <p>Blessed by the minor machine-spirits of the workshop. It never quite dies. Rugged, Tinker-Friendly.</p>
-            <ul class="comp-features">
-              <li><span>Chip Capacity</span><span class="comp-badge">5</span></li>
-              <li><span>Thread Count</span><span class="comp-badge">2</span></li>
-              <li><span>Cache Size</span><span class="comp-badge">2</span></li>
-              <li><span>Battery Life</span><span class="comp-badge">18 hours</span></li>
-            </ul>
-          </div>
+        <div id="comp-grid" class="comp-grid" data-src="../data/small-comps.json" aria-label="COMP models grid">
+          <p class="loading">Loading COMP models…</p>
         </div>
 
-        <div class="comp-grid" aria-label="COMP models grid">
-          <div class="comp-card">
-            <h3>NeuroLink Neural Interface — NeuroLink NX-9</h3>
-            <p>Direct brain-computer interface. High risk, high reward. Requires neural calibration.</p>
-            <ul class="comp-features">
-              <li><span>Chip Capacity</span><span class="comp-badge">8</span></li>
-              <li><span>Thread Count</span><span class="comp-badge">3</span></li>
-              <li><span>Cache Size</span><span class="comp-badge">4</span></li>
-              <li><span>Battery Life</span><span class="comp-badge">18 hours</span></li>
-            </ul>
-          </div>
-                    <div class="comp-card">
-            <h3>NeuroLink Neural Interface — NeuroLink NX-9</h3>
-            <p>Direct brain-computer interface. High risk, high reward. Requires neural calibration.</p>
-            <ul class="comp-features">
-              <li><span>Chip Capacity</span><span class="comp-badge">8</span></li>
-              <li><span>Thread Count</span><span class="comp-badge">3</span></li>
-              <li><span>Cache Size</span><span class="comp-badge">4</span></li>
-              <li><span>Battery Life</span><span class="comp-badge">18 hours</span></li>
-            </ul>
-          </div>
+        <h3>Medium COMPs</h3>
+
+        <div id="comp-grid" class="comp-grid" data-src="../data/medium-comps.json" aria-label="COMP models grid">
+          <p class="loading">Loading COMP models…</p>
+        </div>
+
+        <h3>Large COMPs</h3>
+
+        <div id="comp-grid" class="comp-grid" data-src="../data/large-comps.json" aria-label="COMP models grid">
+          <p class="loading">Loading COMP models…</p>
         </div>
 
 
