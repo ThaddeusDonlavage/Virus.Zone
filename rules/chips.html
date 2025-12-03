@@ -4,15 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../styles.css">
-  <title>VIRUS.ZONE — Page Title</title>
+  <title>Chips | VIRUS.ZONE</title>
 </head>
 <body>
   <div id="header-container"></div>
   <script src="../load-header.js"></script>
 
-  <main class="container">
-    <!-- Your page content here -->
+  <section class="hero">
+    <h1>Chips</h1>
+    <p>The digital abilities and programs that define your character's capabilities in VIRUS.ZONE. Browse, search, and explore the vast library of chips across all classes and manufacturers.</p>
+  </section>
+
+  #TODO Make each column filterable
+
+
+  <main>
+      <h2>Chip Repository</h2>
+      
+      <div id="chips-controls"></div>
+      <div id="chip-count"></div>
+      <div id="chips-table-result" class="chips-container"></div>
   </main>
+
+  <script src="../scripts/chips-table.js"></script>
+
+  <script>
+    // Initialize chips table when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      const table = new ChipsTable('../data/chips.json');
+      table.render();
+    });
+  </script>
 
   <footer>
     VIRUS.ZONE © Virtual Veil Project

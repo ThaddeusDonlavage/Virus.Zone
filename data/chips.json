@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1001,
+    "name": "Sightline Collapse",
+    "source": "Sigma",
+    "tier": "Rare",
+    "type": "Attack",
+    "tags": ["Precision", "Confidence"],
+    "description": "Consume 1 stored die: Your next Precision attack bypasses cover and forces the target to reroll their defensive set. If the reroll is worse, apply ''Pinned'' for 1 round.",
+    "flavor": "A Sigma makes the battlefield fold inward around a single bullet."
+  },
+  {
+    "id": 1002,
+    "name": "Return Fire Loop",
+    "source": "Sigma",
+    "tier": "Uncommon",
+    "type": "Defense",
+    "tags": ["Precision"],
+    "description": "When targeted by a ranged attack, you may perform a free Precision set check. On any matched set, reduce the damage and deal 1 point of retaliatory system stress.",
+    "flavor": "Your reflexes run on predictive code."
+  },
+  {
+    "id": 1003,
+    "name": "Momentum Spike",
+    "source": "Sigma",
+    "tier": "Common",
+    "type": "Buff",
+    "tags": ["Agility"],
+    "description": "If you move at least 2 spaces on your turn, gain +1 pseudo-Width to your next physical action.",
+    "flavor": "Movement is ammunition."
+  },
+  {
+    "id": 1004,
+    "name": "Persona Echo",
+    "source": "Anachronaut",
+    "tier": "Uncommon",
+    "type": "Utility",
+    "tags": ["Wit", "Performance"],
+    "description": "Project an illusory version of yourself. Once per scene, redirect any effect or check targeting you to the Echo.",
+    "flavor": "Your timeline has spare versions of you to burn."
+  },
+  {
+    "id": 1005,
+    "name": "Scripted Deviation",
+    "source": "Anachronaut",
+    "tier": "Rare",
+    "type": "Debuff",
+    "tags": ["Ingenuity"],
+    "description": "Force a target to take the ''wrong'' action on their next turn. They must use their lowest Width set rolled.",
+    "flavor": "Reality glitches when you rewrite its stage directions."
+  },
+  {
+    "id": 1006,
+    "name": "Overclocked Charm",
+    "source": "Influencer",
+    "tier": "Common",
+    "type": "Buff",
+    "tags": ["Charisma"],
+    "description": "When you succeed on a Charisma roll, gain 1 Momentum. Spend 1 Momentum to shift an NPC''s attitude by one tier upward for a short time.",
+    "flavor": "A smile, but with firmware support."
+  },
+  {
+    "id": 1007,
+    "name": "Viral Spotlight",
+    "source": "Influencer",
+    "tier": "Uncommon",
+    "type": "Debuff",
+    "tags": ["Performance", "Charisma"],
+    "description": "Mark a target. For the next two rounds, any ally attacking the target may reroll one die.",
+    "flavor": "Attention is a weapon."
+  },
+  {
+    "id": 1008,
+    "name": "Obscura Kernel",
+    "source": "Anonymous",
+    "tier": "Rare",
+    "type": "Utility",
+    "tags": ["Stealth", "Cyber"],
+    "description": "Your first Stealth roll each encounter generates a ''Ghost Buffer''. Spend it to nullify any trace or signature check.",
+    "flavor": "You were never here."
+  },
+  {
+    "id": 1009,
+    "name": "Nullface",
+    "source": "Anonymous",
+    "tier": "Common",
+    "type": "Defense",
+    "tags": ["Stealth"],
+    "description": "Once per rest, erase all hostile marks, locks, or tracking identifiers targeting you.",
+    "flavor": "Identity is optional."
+  },
+  {
+    "id": 1010,
+    "name": "Compiler Breakpoint",
+    "source": "Compiler",
+    "tier": "Uncommon",
+    "type": "Control",
+    "tags": ["Cyber", "Ingenuity"],
+    "description": "Suspend a digital or semi-digital foe for one round. They cannot act unless they beat your Cyber set.",
+    "flavor": "Even monsters crash."
+  },
+  {
+    "id": 1011,
+    "name": "Recompile Pulse",
+    "source": "Compiler",
+    "tier": "Common",
+    "type": "Utility",
+    "tags": ["Cyber"],
+    "description": "Once per scene, re-roll one Cyber die and treat all matching numbers as Width +1.",
+    "flavor": "Rewrite. Retry. Succeed."
+  },
+  {
+    "id": 1012,
+    "name": "Charm Loop Injection",
+    "source": "Charmer",
+    "tier": "Rare",
+    "type": "Buff",
+    "tags": ["Charisma", "Performance"],
+    "description": "Apply a ''Mesmerized'' condition: target cannot willingly attack you unless provoked.",
+    "flavor": "Hypnotic code woven through tone and gesture."
+  },
+  {
+    "id": 1013,
+    "name": "Crash Guard",
+    "source": "Bananaware",
+    "tier": "Common",
+    "type": "Defense",
+    "tags": ["Vitality"],
+    "description": "Once per rest, convert a damaging hit into a freeze. You lose next action but prevent all damage.",
+    "flavor": "Advanced from the people who brought you forced reboots."
+  },
+  {
+    "id": 1014,
+    "name": "Slapdash Bootloader",
+    "source": "Bananaware",
+    "tier": "Uncommon",
+    "type": "Utility",
+    "tags": ["Wit"],
+    "description": "When rolling Wit, you may reroll a die that shows 1. If it re-rolls into a match, gain +1 temporary Width.",
+    "flavor": "Optimized? No. Effective? Somehow."
+  },
+  {
+    "id": 1015,
+    "name": "Vertex Overlink",
+    "source": "Vertex System",
+    "tier": "Rare",
+    "type": "Buff",
+    "tags": ["Cyber"],
+    "description": "Activate to give all allied Cyber rolls +1 pseudo-Width for 1 round.",
+    "flavor": "Clean architecture breeds clean victories."
+  },
+  {
+    "id": 1016,
+    "name": "Vertex Quiet-Core",
+    "source": "Vertex System",
+    "tier": "Uncommon",
+    "type": "Defense",
+    "tags": ["Stealth"],
+    "description": "Your Stealth rolls are immune to external penalties for one scene.",
+    "flavor": "Silent, elegant, inevitable."
+  },
+  {
+    "id": 1017,
+    "name": "Woden Firmware Torrent",
+    "source": "Woden Techworks",
+    "tier": "Legendary",
+    "type": "Buff",
+    "tags": ["Cyber"],
+    "description": "For two rounds, you may treat any single die as matching any set.",
+    "flavor": "A backdoor to raw potential."
+  },
+  {
+    "id": 1018,
+    "name": "Woden Stress Cycler",
+    "source": "Woden Techworks",
+    "tier": "Rare",
+    "type": "Defense",
+    "tags": ["Vitality"],
+    "description": "Convert all incoming ''system stress'' damage into temporary debuffs instead.",
+    "flavor": "Pain is data. Data is useful."
+  },
+  {
+    "id": 1019,
+    "name": "Mechane Servo-Pulse",
+    "source": "Mechane Industrial",
+    "tier": "Uncommon",
+    "type": "Attack",
+    "tags": ["Physique"],
+    "description": "Empower a melee strike. On hit, shove target 1–2 spaces and impose ''-1 Width'' on their next physical action.",
+    "flavor": "Made with the same tech that bends steel beams."
+  },
+  {
+    "id": 1020,
+    "name": "Mechane Hardjack",
+    "source": "Mechane Industrial",
+    "tier": "Common",
+    "type": "Utility",
+    "tags": ["Engineering"],
+    "description": "Force-open any jammed or locked mechanical device with physical torque.",
+    "flavor": "If it resists, twist harder."
+  },
+  {
+    "id": 1021,
+    "name": "Antiqua Arc-Sigil",
+    "source": "Antiqua",
+    "tier": "Rare",
+    "type": "Utility",
+    "tags": ["Ingenuity", "Ritual"],
+    "description": "Your next Ingenuity roll also counts as Performance, and vice-versa.",
+    "flavor": "Old gods repurposed for modern workflows."
+  },
+  {
+    "id": 1022,
+    "name": "Antiqua Totem Loop",
+    "source": "Antiqua",
+    "tier": "Uncommon",
+    "type": "Buff",
+    "tags": ["Spirit", "Confidence"],
+    "description": "Place a Totem. Allies within 2 spaces gain +1 defense against Spirit-based effects.",
+    "flavor": "Mysticism meets modular hardware."
+  },
+  {
+    "id": 1023,
+    "name": "Civiclink Auto-Compliance",
+    "source": "Civiclink Authority",
+    "tier": "Common",
+    "type": "Debuff",
+    "tags": ["Charisma"],
+    "description": "Apply ''Hindered'' to a civilian or bureaucratic target with a Charisma check.",
+    "flavor": "Ensure cooperation—legally or otherwise."
+  },
+  {
+    "id": 1024,
+    "name": "Scarfix Crypt-Mold",
+    "source": "Scarfix",
+    "tier": "Rare",
+    "type": "Debuff",
+    "tags": ["Cyber"],
+    "description": "Infect a digital target with slow corruption. Each round they take 1 system stress until they pass a Cyber check.",
+    "flavor": "It spreads like rumor and clings like guilt."
+  },
+  {
+    "id": 1025,
+    "name": "Kinetic Snapdart",
+    "source": "Generic",
+    "tier": "Common",
+    "type": "Attack",
+    "tags": ["Agility"],
+    "description": "Add a quick flick to an Agility or Precision attack. On hit, apply ''Staggered'' if target''s Agility is lower.",
+    "flavor": "A tiny trick with outsized payoff."
+  },
+  {
+    "id": 1026,
+    "name": "Ghostnote",
+    "source": "Generic",
+    "tier": "Uncommon",
+    "type": "Debuff",
+    "tags": ["Performance"],
+    "description": "On a successful Performance roll, force the target to misinterpret their next action''s outcome.",
+    "flavor": "A whisper is all it takes to wreck certainty."
+  },
+  {
+    "id": 1027,
+    "name": "Backdoor Mapper",
+    "source": "Generic",
+    "tier": "Common",
+    "type": "Utility",
+    "tags": ["Cyber", "Wit"],
+    "description": "Scan any system for structural weak points. Your next Cyber/Engineering roll reveals bypass options.",
+    "flavor": "Every system keeps a secret; you know where to ask."
+  },
+  {
+    "id": 1028,
+    "name": "Adaptive Footwork",
+    "source": "Generic",
+    "tier": "Rare",
+    "type": "Defense",
+    "tags": ["Agility"],
+    "description": "When rolling Agility, move 1 space before resolving the action. Once per scene ignore forced movement.",
+    "flavor": "The world adjusts to your pace."
+  },
+  {
+    "id": 1029,
+    "name": "Static Lash",
+    "source": "Generic",
+    "tier": "Common",
+    "type": "Attack",
+    "tags": ["Voltage"],
+    "description": "A basic electrical strike that imposes ''Shorted'', reducing target''s next Cyber or Precision roll.",
+    "flavor": "A jolt that rewrites priorities."
+  },
+  {
+    "id": 1030,
+    "name": "Cryo Spike",
+    "source": "Generic",
+    "tier": "Uncommon",
+    "type": "Attack",
+    "tags": ["Cryo"],
+    "description": "On hit, freeze footing or circuitry. Target''s movement is halved next round.",
+    "flavor": "Cold solves many problems."
+  },
+  {
+    "id": 1031,
+    "name": "Biohazard Drip",
+    "source": "Generic",
+    "tier": "Rare",
+    "type": "Debuff",
+    "tags": ["Biohazard"],
+    "description": "Apply ''Infected''. The target must roll Vitality each round or take escalating penalties.",
+    "flavor": "Life finds a way—into your bloodstream."
+  },
+  {
+    "id": 1032,
+    "name": "Glitchwave",
+    "source": "Generic",
+    "tier": "Uncommon",
+    "type": "Debuff",
+    "tags": ["Glitch"],
+    "description": "Distort a target''s data perceptions. They must reroll one chosen die on their next roll.",
+    "flavor": "Your existence stutters."
+  },
+  {
+    "id": 1033,
+    "name": "Sharpset",
+    "source": "Generic",
+    "tier": "Common",
+    "type": "Buff",
+    "tags": ["Precision"],
+    "description": "Your next attack using Precision treats its Height result as +1.",
+    "flavor": "A subtle correction with massive payoff."
+  },
+  {
+    "id": 1034,
+    "name": "Overstep",
+    "source": "Generic",
+    "tier": "Common",
+    "type": "Utility",
+    "tags": ["Agility"],
+    "description": "When moving, ignore the first tile of hazardous terrain.",
+    "flavor": "One clean leap solves a hundred problems."
+  },
+  {
+    "id": 1035,
+    "name": "Heat Sink",
+    "source": "Generic",
+    "tier": "Common",
+    "type": "Defense",
+    "tags": ["Thermo", "Vitality"],
+    "description": "Reduce incoming Thermo damage by 1 per hit for the scene.",
+    "flavor": "Turn fire into a shrug."
+  },
+  {
+    "id": 1036,
+    "name": "Earthbind Slam",
+    "source": "Generic",
+    "tier": "Uncommon",
+    "type": "Control",
+    "tags": ["Physique", "Earth"],
+    "description": "Strike the ground, creating tremors. All nearby enemies must reroll their highest die.",
+    "flavor": "The ground itself becomes your ally."
+  },
+  {
+    "id": 1037,
+    "name": "Watercoil",
+    "source": "Generic",
+    "tier": "Uncommon",
+    "type": "Utility",
+    "tags": ["Water"],
+    "description": "Form moisture into conduits. Next elemental attack gains a synergy bonus: add +1 pseudo-Width.",
+    "flavor": "Flow improves function."
+  },
+  {
+    "id": 1038,
+    "name": "Holo Shroud",
+    "source": "Generic",
+    "tier": "Rare",
+    "type": "Defense",
+    "tags": ["Performance", "Stealth"],
+    "description": "Project a shifting hologram. Treat all attacks against you as if from +1 range band away for 1 round.",
+    "flavor": "Distance is an illusion."
+  },
+  {
+    "id": 1039,
+    "name": "Voltage Anchor",
+    "source": "Generic",
+    "tier": "Common",
+    "type": "Utility",
+    "tags": ["Voltage", "Engineering"],
+    "description": "Stabilize a circuit or device. Remove one electronic hazard or disable a trap''s trigger.",
+    "flavor": "A grounding wire for chaos."
+  },
+  {
+    "id": 1040,
+    "name": "Pressure Point Overlay",
+    "source": "Generic",
+    "tier": "Rare",
+    "type": "Attack",
+    "tags": ["Physique", "Precision"],
+    "description": "Convert a melee hit into a nerve strike. Target loses 1 die from their next roll.",
+    "flavor": "Anatomy meets interface."
+  }
+]
