@@ -207,6 +207,12 @@
 
     }
 
+    h4{
+      color: var(--error-magenta);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
     .panel p {
       color: var(--crt-white);
       font-size: 14px;

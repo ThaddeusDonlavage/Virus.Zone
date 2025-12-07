@@ -11,8 +11,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Get all h2 and h3 elements from the main content
-  const headings = Array.from(document.querySelectorAll('main h2, main h3'));
+  // Get all h2, h3 and h4 elements from the main content
+  const headings = Array.from(document.querySelectorAll('main h2, main h3, main h4'));
   
   if (headings.length === 0) return; // No headers, skip
 
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   tocList.innerHTML = ''; // Clear existing
 
   let currentH2Item = null;
+  const h2H4Map = new Map(); // map h2 id -> h4 container element
   headings.forEach(heading => {
     const li = document.createElement('li');
     const a = document.createElement('a');
@@ -45,6 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
       li.appendChild(a);
       tocList.appendChild(li);
       currentH2Item = li; // Track current H2 for nesting H3s
+      // create a hidden H4 container for this H2 (will be shown only when this H2 is active)
+      const h4Container = document.createElement('ul');
+      h4Container.className = 'toc-h4-list';
+      h4Container.style.display = 'none';
+      h4Container.style.marginLeft = '12px';
+      h4Container.style.listStyle = 'none';
+      h4Container.style.padding = '0';
+      currentH2Item.appendChild(h4Container);
+      h2H4Map.set(heading.id, h4Container);
     } else if (heading.tagName === 'H3' && currentH2Item) {
       // Nest H3 under the current H2
       let subList = currentH2Item.querySelector('ul');
@@ -58,6 +68,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const subLi = document.createElement('li');
       subLi.appendChild(a);
       subList.appendChild(subLi);
+    }
+    else if (heading.tagName === 'H4' && currentH2Item) {
+      // Add H4 under the H2's dedicated H4 container (hidden unless H2 active)
+      const h4List = h2H4Map.get(currentH2Item.querySelector('a').getAttribute('href').substring(1));
+      if (h4List) {
+        const h4Li = document.createElement('li');
+        h4Li.appendChild(a);
+        h4List.appendChild(h4Li);
+      }
     }
   });
 
@@ -89,7 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (parentH2) {
           const parentLink = tocLinks.find(l => l.getAttribute('href') === ('#' + parentH2.id));
           if (parentLink) parentLink.classList.add('active');
+          // show h4s for this parent H2 and hide others
+          showH4ForH2(parentH2.id);
         }
+      }
+      // If clicked an H2 link, show its H4s
+      if (target && target.tagName === 'H2') {
+        showH4ForH2(target.id);
       }
     });
   });
@@ -116,7 +141,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (parentH2) {
           const parentLink = tocLinks.find(l => l.getAttribute('href') === ('#' + parentH2.id));
           if (parentLink) parentLink.classList.add('active');
+          // show h4s for this parent H2 and hide others
+          showH4ForH2(parentH2.id);
         }
+      }
+      else if (current.tagName === 'H2') {
+        // when an H2 is active, show its H4s
+        showH4ForH2(current.id);
+      }
+    }
+  }
+
+  // show h4-list for a given h2 id, hide others
+  function showH4ForH2(h2id) {
+    for (const [id, h4El] of h2H4Map.entries()) {
+      if (id === h2id) {
+        h4El.style.display = '';
+      } else {
+        h4El.style.display = 'none';
       }
     }
   }
