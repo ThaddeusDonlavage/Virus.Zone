@@ -66,7 +66,7 @@
     "tier": "Uncommon",
     "type": "Debuff",
     "tags": ["Performance", "Charisma"],
-    "description": "Mark a target entity. Any entity that targets that entity, can reroll one die immediately. This mark requires one die per turn after activation to maintain.",
+    "description": "Mark a target entity. When entities perform any action directed towards that targetted entity, they may reroll one die from the register. This mark requires one die per turn after activation to maintain.",
     "flavor": "Attention is a weapon."
   },
   {
@@ -506,7 +506,7 @@
     "tier": "Uncommon",
     "type": "Utility",
     "tags": ["Charisma"],
-    "description": "Whenever you target an entity with a Charisma buff, you may also heal faults equal to Action strength.",
+    "description": "When you target an entity with a Charisma Action, you may choose to remove one Fault Die, once per turn.",
     "flavor": "A cloak woven from pure data streams."
   },
   {
@@ -838,6 +838,46 @@
     "tags": ["Cyber"],
     "description": "Applies Confused, reduce the target enity's Cyber score by 1 for the scene.",
     "flavor": "Disrupt the digital mind with calculated chaos."
+  },
+  {
+    "id": 1085,
+    "name": "Targetted Messaging",
+    "source": "Influencer",
+    "tier": "Uncommon",
+    "type": "Control",
+    "tags": ["Performance"],
+    "description": "Reaction: If being targetted by an Action, you can force the entity targetting to reroll one die of their choice.",
+    "flavor" : "Some last minute hesitation caused from years of subtle messagings"
+  },
+  {
+    "id": 201,
+    "name": "Stand Strong",
+    "source": "Sigma",
+    "tier": "rare",
+    "type": "Control",
+    "tags": ["Confidence"],
+    "description": "As an action, you enter into a reactive stance. Until the end of the next turn, whenever an enemy targets you, you may attack with a Minor Reaction, provided they are within range.",
+    "flavor": "The power of the hunt is one of deep meditation and instinct. In a flow state, anything becomes possible."
+  },
+  {
+    "id": 202,
+    "name": "Grit",
+    "source": "Sigma",
+    "tier": "uncommon",
+    "type": "Buff",
+    "tags": ["Confidence"],
+    "description": "If your Confidence score is reduced, you gain a +1 to a Physical roll on the next turn.",
+    "flavor": "The facades of the soldier must be consumed to serve the ultimate purpose."
+  },
+  {
+    "id": 203,
+    "name": "Go Viral",
+    "source": "Influencer",
+    "tier": "Common",
+    "type": "Utility",
+    "tags": ["Charisma"],
+    "description": "While targetting an entity, you may  choose to discard one cache die. The target gains the Viral status. You can roll an additional die when targetting that entity with a Charisma ability while they have the Viral status.",
+    "flavor": "Sometimes you need to wait until people care, and then it will be the time to strike."
   }
 
 ]
