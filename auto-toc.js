@@ -11,8 +11,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Get all h2, h3 and h4 elements from the main content
-  const headings = Array.from(document.querySelectorAll('main h2, main h3, main h4'));
+  // Get all h2 and h3 elements from the main content
+  const headings = Array.from(document.querySelectorAll('main h2, main h3'));
   
   if (headings.length === 0) return; // No headers, skip
 

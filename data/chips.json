@@ -291,11 +291,11 @@
   },
   {
     "id": 1030,
-    "name": "Cryo Strike",
+    "name": "Ice Strike",
     "source": "Generic",
     "tier": "Uncommon",
     "type": "Attack",
-    "tags": ["Cryo"],
+    "tags": ["Ice"],
     "description": "On a melee attack, inflict ''Frozen'' condition. Target''s movement is halved next round.",
     "flavor": "Cold solves many problems."
   },
@@ -715,8 +715,8 @@
     "source": "Generic",
     "tier": "Rare",
     "type": "Attack",
-    "tags": ["Cryo"],
-    "description": "Any Cryo attack with 3 or more Power applies the ''Frozen'' condition to the target entity.",
+    "tags": ["Ice"],
+    "description": "Any Ice attack with 3 or more Power applies the ''Frozen'' condition to the target entity.",
     "flavor": "Chill your enemies to the bone with enhanced cold."
   },
   {
@@ -776,7 +776,7 @@
     "tier": "Common",
     "type": "Defense",
     "tags": ["Thermo"],
-    "description": "Gain +1 Defense against Fire and Cryo attacks.",
+    "description": "Gain +1 Defense against Fire and Ice attacks.",
     "flavor": "Maintain optimal temperature in extreme conditions."
   },
   {
