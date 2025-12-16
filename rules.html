@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/src/favicon.png" />
   <link rel="stylesheet" href="styles.css">
+  <script src="auto-toc.js"></script>
   <title>VIRUS.ZONE — Rules</title>
 </head>
 <body>
@@ -26,29 +28,179 @@
       <p>Core rules and tableflow for Virtual Veil, summarized for quick reference.</p>
     </section>
 
+    <section class="sections">
+      <a class="panel" id="panels" href="rules/combat.html" aria-label="combat">
+        #TODO Make this a working link
+        <h3>also see</h3>
+        <h2> Combat Rules </h2></a>
+    </section>
+
     <section class="content">
-      <h2>Core Concept</h2>
-      <p>Actions are resolved with a single roll: 1d20 + Attribute + Skill vs Difficulty (DC). Use the <a href="panels/mechanics.html">Core Mechanics</a> panel for full resolution examples.</p>
+      <h2 id="core-concept">Core Concept</h2>
+      <p>Virtual Veil is a tabletop roleplaying game which uses the One-Roll Engine (ORE) as a baseline.</p>
+      <p> It is recommended that each player, including the Compiler, bring a set of ten ten-sided dice, which will be referred to as a <strong>d10</strong>, or <strong>digits</strong>. In ORE systems, the success of any action requires a number of dice to be rolled, and at least one match pair of the same number rolled. The easiest success is called a <strong>Dub</strong>, which just means you have a matching pair. Similarly other successes may be described as trips, quads, and quints respectively. There are instances of difficulty which may require more than a pair, such as a triple but those cases will be discussed later. The meaning will be explained later, but when making a roll, all active dice in play will be referred to as the <strong>register</strong>. Use the <a href="panels/mechanics.html">Core Mechanics</a> panel for full resolution examples.</p>
 
-      <h2>Character Progression</h2>
-      <p>Characters advance by acquiring Experience (XP) through missions. XP buys attribute points, skills, or COMP upgrades. See <a href="builder.html">Character Builder</a> for creation rules.</p>
+      <p>Remember, you aren’t telling a story explicitly when a group sits around a table to play the game. The story grows from the collections of decisions and outcomes rolled by dice. As a general rule, if an activity would be considered somewhat trivial such as buying cereal at a grocery store, showering, going to sleep or driving a few hours to work, you do not need to roll, you may complete them automatically. Only force a roll when the outcome is uncertain or contested.</p>
 
-      <h2>Sanity & Corruption</h2>
-      <p>The Virus introduces Corruption points. When a character accumulates Corruption they gain unstable abilities and risk permanent changes. Corruption can be resisted via Will checks.</p>
+      <h3 id="ore-probability">ORE Probability Table</h3>
+      <p>The table below shows the percentage chance of obtaining matching sets for a given number of dice rolled (useful when estimating expected outcomes):</p>
 
-      <h2>Table Rules</h2>
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th># Dice</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2d</td><td>90.00%</td><td>10.00%</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+          <tr><td>3d</td><td>72.00%</td><td>27.00%</td><td>1.00%</td><td>-</td><td>-</td><td>-</td></tr>
+          <tr><td>4d</td><td>50.40%</td><td>45.90%</td><td>3.60%</td><td>0.10%</td><td>-</td><td>-</td></tr>
+          <tr><td>5d</td><td>30.24%</td><td>61.20%</td><td>8.10%</td><td>0.45%</td><td>0.01%</td><td>-</td></tr>
+          <tr><td>6d</td><td>15.12%</td><td>69.12%</td><td>14.49%</td><td>1.22%</td><td>0.05%</td><td>&lt;0.01%</td></tr>
+          <tr><td>7d</td><td>6.05%</td><td>68.80%</td><td>22.43%</td><td>2.55%</td><td>0.17%</td><td>0.01%</td></tr>
+          <tr><td>8d</td><td>1.81%</td><td>61.92%</td><td>31.25%</td><td>4.59%</td><td>0.41%</td><td>0.02%</td></tr>
+          <tr><td>9d</td><td>0.36%</td><td>51.30%</td><td>40.03%</td><td>7.42%</td><td>0.83%</td><td>0.06%</td></tr>
+          <tr><td>10d</td><td>0.04%</td><td>39.54%</td><td>47.72%</td><td>11.06%</td><td>1.49%</td><td>0.14%</td></tr>
+        </tbody>
+      </table>
+
+
+      <h2 id="hierarchy">Hierarchy of Mechanics</h2>
+
+      <h3 id="storage">Storage</h3>
+      <p>The term for stats that are roughly set in stone for the present moment. These include stats, skills, and your Computers specifications, software and operating systems. Storage is the term for the character sheet which will not be affected directly by random rolls. It’s called storage because it’s roughly locked away and you shouldn’t need to edit any information in it unless you are purchasing items or changing major details about your character.</p>
+
+      <h3 id="cache">Cache</h3>
+      <p>Cache represents temporary or dynamic information that can change frequently during gameplay. This includes things like current health, temporary buffs or debuffs, and other situational modifiers. The most important of these modifiers the <strong>data cache</strong>, a set of dice that are pre-rolled as soon as you boot your cosmOS. The data cache can be used as a die to be added to any normal roll and then expanded during play. Additionally, damage is considered to be stored in the cache which will be covered more in the Combat section. Cache effects are not permanent but do take more time to get rid of than register effects. </p>
+
+      <h3 id="register">Register</h3>
+      <p>The register is the pool of dice that are actively rolled to resolve actions. The most random and violate of stats, the register is in reference to all current dice rolled for a specific purpose, which only will last for the current round. There are several things that can happen to the register while it is still in play. Remember, you keep your dice in the data cache as long as your comp is still running, you discard all dice in your register unless told otherwise. Moving dice from the register to the cache is called <strong>loading</strong>.</p>
+
+      <h2 id="adding-subtracting">Adding Or Subtracting</h2>
+      <p>Sometimes for the purposes of comparing rolls or using modifiers, the individual number on the die matters, not just that they are pairs. You can convert each roll made into a numerical value by using the number of matching pairs as the tens digit and the actual face number as the ones digit. For example, three sevens would be represented as <strong>37</strong>. Adding or subtracting rolls can potentially turn a failure into a success, since an individual die could theoretically be turned into a pair or vice-versa.</p>
+
+      <h2 id="moves">Types of Moves</h2>
+
+      <h3>Basic Actions</h3>
+      <p>Any Action that requires at minimum a dub to be rolled is considered a Basic Action.</p>
+
+      <h3>Free Actions</h3>
+      <p>An action that can be declared on your turn without having to worry about dice. Examples include talking, adjusting clothing, or messing with smaller gadgets.</p>
+
+      <h3>Minor Actions</h3>
+      <p>Any action which can be completed with less than a dub, usually a singular die. Sometimes, in the heat of the moment, it may be difficult to complete tasks that would otherwise be trivial. These are referred to as Minor Actions. Minor Actions can be performed in tandem with any other normal actions on a turn, provided there is at least one die that can be used for it. For example, getting back up from the ground is a Minor Action. These do not count as Combos or Strings.</p>
+
+      <h3>Special Actions</h3>
+      <p>Special Actions are only possible by unleashing the primal power deep within cosmOS. Special Actions have a minimum requirement of dice that must be made up of dice exclusively in the cache.</p>
+
+      <h3>Combos and Strings</h3>
+      <p>Normally each action coincides with one roll from the register. There are certain triggers which allow multiple actions to be taken in quick succession within the same round. Since the actions are occurring in the same round, the register will remain on the board.</p>
+
+      <p><strong>Combo:</strong> Any Action that will always be allowed to be completed as a secondary after an initial action takes place on that turn.</p>
+
+      <p><strong>String:</strong> A second independent action done within that turn which is not dependent on the first.</p>
+
+      <h2 id="physical-stats">Physical Stats</h2>
+#TODO Seperate out some of the stats and sections to help table of contents
+      <h3>Body Stats</h3>
+      <p><strong>Agility:</strong> How fast are you? If you want a character that’s quick on their toes and has great reaction time, you’d want high Agility. Agility controls physical speed and also the speed by which your hands and body can interface with the digital world. Agility can also be used to avoid taking damage.</p>
+
+      <p><strong>Physique:</strong> How obviously in shape are you? The tone of your muscles and your ability to carry heavy objects. Most attacks that rely on brute strength or athletic skill are rolled with your Physique stat.</p>
+
+      <p><strong>Precision:</strong> How good are you at using your hands, or coordination in general. Characters with excellent Precision may be great at driving, pickpocketing, performing, or painting. Some weapons rely on Precision, such as guns.</p>
+
+      <p><strong>Vitality:</strong> How is your health in general? Unlike the other three stats which control exertion, Vitality is your ability to remain resilient. It governs resistance to poisons, disease, and helps reduce the risk of dangers.</p>
+
+      <h2 id="mind-stats">Mind Stats</h2>
+
+      <p><strong>Cyber:</strong> How computer literate are you? High Cyber allows you to find information quickly, excel in digital competitions, or write effective code. In the Digital World, Cyber often plays the role Physique plays in the Walking World.</p>
+
+      <p><strong>Engineering:</strong> How handy are you? Engineering is your ability to fix, repair, troubleshoot, and sabotage technology.</p>
+
+      <p><strong>Ingenuity:</strong> How sharp is your mind? Ingenuity represents creativity and the ability to deduce and improvise solutions. Many spells and technological abilities rely on Ingenuity.</p>
+
+      <p><strong>Wit:</strong> How well studied are you? Build a character with high Wit if you want strong contextual knowledge, street smarts, or academic understanding. Wit also controls combat initiative.</p>
+
+      <h2 id="spirit-stats">Spirit Stats</h2>
+
+      <p><strong>Charisma:</strong> How persuasive are you? High Charisma helps in convincing others, building influence, or running social campaigns.</p>
+
+      <p><strong>Confidence:</strong> How good are you at convincing yourself? Confidence helps you overcome disadvantages and push through difficult situations.</p>
+
+      <p><strong>Performance:</strong> How good are you at affecting others' perceptions? Performance covers acting, singing, deception, and similar social displays.</p>
+
+      <p><strong>Stealth:</strong> How often are you unnoticed? High Stealth allows you to move unseen and avoid detection in both real and digital spaces.</p>
+
+      <h2 id="comp-stats">COMP Stats</h2>
+      <p>Along with the stats that define the Player Character, each character sheet will also have the stats of the COMP.</p>
+      <p><strong>Distribution:</strong> A major decision at the begininng of the game is which COMP Distribution the player will choose for their character. Each distribution has its own unique set of stats that define its capabilities and playstyle, and may be locked out of certain abilities or features.</p>
+
+      <p><strong>Processing Power:</strong> This defines the maximum amount of Chips that can be used. New weapons, powers or abilities require Chips to properly integrate with a COMP.</p>
+
+      <p><strong>Thread Count:</strong> The maximum number of simultaneous processes the COMP can handle. In game terms, this means that this is the maximum number of skills you can utilize at once. By default and for more characters, the Thread Count is set to 1.</p>
+
+      <h2 id="combat">Combat</h2>
+      <p>Sometimes you need to fight. When combat begins the Compiler must clearly announce the start of combat. Immediately after the announcement, each character rolls a <strong>Prediction</strong> roll (similar to Initiative in other systems) to determine reaction order.</p>
+
+      <h3>Phases of Combat</h3>
+
       <ul>
-        <li>Keep rulings fast — default to simple outcomes when unsure.</li>
-        <li>Use Panels for quick lookup; expand rules in full rulebook drafts later.</li>
-        <li>Players and GM should agree on ambiguous consequences ahead of time.</li>
+        <li><strong>Prediction Phase: </strong>At the begining of each combat, each entity rolls their <strong>Wit</strong>, and the result is their <em>Outthink Value</em>. Certain abilities and moves have the Prediction Quality, which will allow them circumvent opposing entities, if the Outthink Value is higher. Examples could include a Sneak Attack, Dodge or Parry.</li>
+
+        <p></p>
+
+        <li><strong>Initiative Phase: </strong>After defining the Outthink Values, each entity rolls their Physical Initiative to determine the order of actions, going forward as well. In the physical world and in areas affected by the Veil, the intiative roll uses the <strong>Agility</strong> score. Within cosmOS, use the <strong>Precision</strong> score.</li>
+
+        <p></p>
+
+        <li><strong>Call Phase: </strong> All active entities act in order from lowest Outthink Value to highest to declare their intended <strong>Called Action</strong>. The Called Action's only requirement, is that you must select a stat to use for your ability. The ability is rolled and added to the register but does not resolve until the start of that entity's turn. Once all Called Actions are declared, the Resolution Phase begins.</li>
+
+        <p></p>
+
+        <li><strong>Resolution Phase: </strong> Each entity takes their turn in order of Physical Initiative, resolving their Called Action first, then any other actions they can take with their remaining dice. Many abilities may affect the register over the course of the turn, which may change available abilities at the time of their use. Additionally, reactions may be used outside of the turn order. You may use a Reaction at any point in the initiative where your Outthink Value is higher than the current Initiative.</li>
+
+        <p></p>
+
+        <li><strong>End Phase: </strong>Once all entities have taken their turn, the round ends. Any effects that last until the end of the round expire, and a new round begins starting again at the Call Phase. The affects of taking damage are also finalized at this phase</li>
       </ul>
 
-      <h2>Quick Links</h2>
+      <h3>Faults & Errors</h3>
+      <p>Fault Dice represent system or bodily damage. When rolling Fault Dice, which happens at the end of every turn, what would normally be a success, now results in the addition of an Error Die, which is added to the cache, and the depletion of one point of Vitality. Once an entitie's Vitality reaches zero, they are considered out of commission until they can be revived. In the Digital World, the COMP will immediately evacuate its user; in the Physical World the character is incapacitated for the scene, or worse if the Compiler deems the situation to be grave enough.</p>
+
+      <p><strong>Other Entity Damage Methods:</strong> In many instances, especially for weaker enemies, its recommended to skip the Fault Roll system for taking damage, and instead directly subtracting out the Vitality of the entity.  </p>
+      
+      <p>At the end of each entity's turn, they roll all Fault dice. Any successes inflict a harder-to-heal status and escalate consequences; repeated Fault successes increase severity.</p>
+
+      <h4>Injury Severity</h4>
       <ul>
-        <li><a href="panels/mechanics.html">Core Mechanics</a></li>
-        <li><a href="panels/characters.html">Character Creation</a></li>
-        <li><a href="panels/items.html">Monsters & Items</a></li>
+        <li><strong>Minor Injury (dub):</strong> 1 Error Die rolled for each action</li>
+        <li><strong>Moderate Injury (trip):</strong> 2 Error Dice rolled for each action</li>
+        <li><strong>Severe Injury (quad):</strong> 3 Error Dice rolled for each action</li>
+        <li><strong>Critical Injury:</strong> Incapacitation + Risk of Death</li>
       </ul>
+    </section>
+    <section class="sections">
+
+      <a class="panel" id="comps" href="rules/comps.html" aria-label="COMPs">
+      <h2> COMPs </h2>
+      <p>An artist needs their tools.</p></a>
+
+      <a class="panel" id="panels" href="rules/chips.html" aria-label="Chips">
+      <h2> Chips </h2>
+      <p>Customize the skills and powers of the COMP.</p>    
+      </a>
+
+      <a class="panel" id="comps" href="rules/keywords.html" aria-label="Keywords">
+      <h2> Keywords </h2>
+      <p>Definitions and game language.</p></a>
+
+
     </section>
   </main>
 
@@ -56,4 +208,5 @@
     VIRUS.ZONE © Virtual Veil Project
   </footer>
 </body>
+    <script src="toc.js"></script>
 </html>

@@ -1,0 +1,42 @@
+[
+    {
+      "name": "Woden Professional Home PC — Dark Tower Mk. 3",
+      "description": "Popular with classrooms and hobbyist demonologists.",
+      "chipCapacity": 6,
+      "threadCount": 2,
+      "cacheSize": 5,
+      "batteryLife": "0"
+    },
+    {
+      "name": "Mechane Obelisc — Mechane Industrial MK IV Zeta",
+      "description": "This bulky desktop hums with a steady bass tone. Some swear they purr when happy.",
+      "chipCapacity": 14,
+      "threadCount": 1,
+      "cacheSize": 4,
+      "batteryLife": "7 seconds"
+    },
+    {
+      "name": "Bananaware Rama Dingdong — Bananaware Family Gaming Station",
+      "description": "A household staple. Its cheerful interface belies a powerful core.",
+      "chipCapacity": 9,
+      "threadCount": 2,
+      "cacheSize": 4,
+      "batteryLife": "0"
+    },
+    {
+      "name": "Starfix Eclipse — Personal Gaming \"Home\"",
+      "description": "Full VR immersion with haptic feedback. Oddly coffin shaped.",
+      "chipCapacity": 16,
+      "threadCount": 2,
+      "cacheSize": 5,
+      "batteryLife": "0"
+    },
+    {
+      "name": "Vertex Server — Vertex Systems Pinnacle X2",
+      "description": "Banned from several countries for ‘excessive emissions.’",
+      "chipCapacity": 10,
+      "threadCount": 3,
+      "cacheSize": 5,
+      "batteryLife": "0"
+    }
+]

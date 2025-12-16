@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css">
   <title>VIRUS.ZONE — Virtual Veil</title>
+  <link rel="icon" type="image/png" href="/src/favicon.png" />
 </head>
 <body>
   <div class="scanlines"></div>
@@ -20,6 +22,11 @@
     </nav>
   </header>
 
+  
+#TODO Organize the js files
+#TODO Seperate the css files into multiple files
+#TODO Main Project Lore
+
   <section class="hero">
     <h1>Virtual Veil</h1>
     <p>A fractured truth and rewritten physics.
@@ -28,32 +35,28 @@
   </section>
 
   <section class="sections">
-    <div class="panel" id="lore">
-      <h2>
-        <a href="lore.html"> Universe Lore</a>
-      </h2>
+    <a class="panel" id="lore" href="lore.html" aria-label="Universe Lore">
+      <h2>Universe Lore</h2>
       <p>Digital shadows rewrite physical laws. Cities fracture into layered
          realities as rogue AIs and demonic entities claim territory. The Veil is thinning — and
          the Virus spreads.</p>
-    </div>
+    </a>
 
-    <div class="panel" id="rules">
-      <h2>
-       <a href="rules.html">Game Rules</a>
-      </h2>
+    <a class="panel" id="rules" href="rules.html" aria-label="Game Rules">
+      <h2>Game Rules</h2>
       <p>Rulebook for a fully functionally Tabletop RPG System.</p>
-    </div>
+    </a>
 
-    <div class="panel" id="builder">
+    <a class="panel" id="builder" href="builder.html" aria-label="Character Builder">
       <h2>Character Builder</h2>
       <p>Forge a contract, and create a COMP User.</p>
-    </div>
+    </a>
 
-    <div class="panel" id="comp">
+    <a class="panel" id="comp" href="comp.html" aria-label="COMP System">
       <h2>COMP System</h2>
       <p>Your digital familiar. Your spell engine. Your interface with CosmOS — and the only thing
          keeping the Virus from rewriting you entirely.</p>
-    </div>
+    </a>
   </section>
 
   <footer>

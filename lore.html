@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/src/favicon.png" />
   <link rel="stylesheet" href="styles.css">
   <title>VIRUS.ZONE — Lore</title>
 </head>
+
+
+
+
+<script src="auto-toc.js"></script>
+
 <body>
   <div class="scanlines"></div>
 
@@ -17,13 +24,15 @@
       <a href="builder.html">Character Builder</a>
       <a href="comp.html">COMP System</a>
     </nav>
-  </header> 
+  </header>
 
-  <main class="container">
+    <main class="container">
     <section class="hero">
       <h1>Universe Lore</h1>
       <p>The Veil is thinning — and the Virus spreads.</p>
     </section>
+
+
 
     <section class="content">
       <h2>VIRUS.ZONE</h2>
@@ -33,33 +42,37 @@
 
       <p><strong>COMP</strong>: A spiritual resonant computing device, capable of interfacing cosmOS and identifying instances of The Veil. Part spirit-familiar, part front-end navigation device with a main operation of evoking psychic phenomena</p>
 
+      #TODO #1 Finish the full contents
       <h2>Table of Contents</h2>
-      <nav>
-      <ul>
-        <li><a href="lore-cosmOS.html">cosmOS</a></li>
-        <li><a href="lore-veil.html">The Veil</a></li>
-        <li><a href="lore-entities.html">Entities</a></li>
-        <li><a href="lore-factions.html">Factions</a></li>
-        <li><a href="lore-locations.html">Locations</a></li>
-        <li><a href="lore-timeline.html">Timeline</a></li>
-        <li><a href="lore-inspiration.html">Real World Inspiration</a></li>
-      </ul>
-      </nav>
+      <section class="sections">
+      <a class="panel" id="cosmOS" href="lore/cosmOS.html" aria-label="COMPs">
+      <h2> cosmOS </h2>
+      <p>A continent of shadows, secrets and magic.</p></a>
+
+      <a class="panel" id="veil" href="lore/veil.html" aria-label="Veil">
+      <h2> The Veil </h2>
+      <p>The gnawing pulses of dreams from the other side. </p>    
+      </a>
+
+      <a class="panel" id="factions" href="lore/factions.html" aria-label="Factions">
+      <h2> Factions </h2>
+      <p>The powerful tend to monopolize against the weak.</p></a>
+
+      <a class="panel" id="locations" href="lore/locations.html" aria-label="Locations">
+        <h2> Locations </h2>
+        <p> The hubs and nodes that provide some structure in a confusing world.</p>
+      </a>
       
-    
+      <a class="panel" id="time" href="lore/timeline.html" aria-label="Timeline">
+      <h2> World Timeline </h2>
+      <p>The etchings of secret history.</p></a>
 
-      <h2>Factions</h2>
-      <ul>
-        <li><strong>Corporates</strong> — Tech syndicates using COMPs to control markets and minds.</li>
-        <li><strong>Underground</strong> — Hacktivists, salvagers, and denizens resisting the rewrite.</li>
-        <li><strong>Sprites</strong> — Limited Artificial Entities, often enigmatic and unpredictable.</li>
-        <li><strong>Demons</strong> — Malevolent entities from beyond the Veil, seeking to corrupt and consume.</li>
-      </ul>
+      <a class="panel" id="time" href="lore/inspiration.html" aria-label="Inspiration">
+      <h2> Real World Inspiration </h2>
+      <p>Some of the media behind The Veil.</p></a>
 
-      <h2>Locations</h2>
-      <p>Street-level neon slums overlay corrupted data-planes. Key locations include the Neon Warrens, the Server-Sprawl, and the Cathedral of Firmware.</p>
-      <p>jump to <a href="rules.html">Rules</a> or the <a href="panels/overview.html">Panels</a> pages.</p>
     </section>
+
   </main>
 
   <footer>
