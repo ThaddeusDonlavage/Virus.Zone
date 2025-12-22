@@ -17,6 +17,7 @@
 
     .content {
       padding: 20px;
+      padding-left: 25px;
     }
 
     body {
@@ -278,9 +279,10 @@
 /* COMP card grid */
 .comp-grid {
   display: grid;
-  /* fixed compact card width, max 4 per row; extra items wrap to new rows */
-  grid-template-columns: repeat(4, 240px);
-  justify-content: right;
+  /* compact card width: auto-fit columns up to 240px; center the grid on wide screens */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 240px));
+  justify-content: center;
+  justify-items: center;
   gap: 16px;
   margin-top: 18px;
 }
