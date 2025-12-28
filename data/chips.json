@@ -878,6 +878,32 @@
     "tags": ["Charisma"],
     "description": "While targetting an entity, you may  choose to discard one cache die. The target gains the Viral status. You can roll an additional die when targetting that entity with a Charisma ability while they have the Viral status.",
     "flavor": "Sometimes you need to wait until people care, and then it will be the time to strike."
+  },
+  {
+    "id": 204,
+    "name": "Lone Wolf",
+    "source": "Sigma",
+    "tier": "Common",
+    "type": "Buff",
+    "tags": ["Precision", "Confidence"],
+    "description": "When no allies are within 10ft. add +1 die to Precision and Confidence rolls. You cannot gain the benefits of this ability if you were the target of a buff by a friendly creature since your last turn. Stack: increase the distance required by 10ft."
+  },
+  {
+    "id": 205,
+    "name": "Overkill",
+    "source": "Sigma",
+    "tier": "Uncommon",
+    "type": "Buff",
+    "tags": ["Luck"],
+    "description": " If you defeat an enemy, on your next turn, treat all 9s and 10s as the same digit."
+  },
+  {
+    "id": 206,
+    "name": "Mini Map",
+    "source": "Sigma",
+    "tier": "Rare",
+    "type": "Utility",
+    "tags": ["Movement"],
+    "description": "Allows for a special scanning action which takes an entire turn. The action generates a digital map of the immediate area, revealing all routes, obvious terrain threats and bonuses."
   }
-
 ]

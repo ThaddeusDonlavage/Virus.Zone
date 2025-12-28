@@ -152,13 +152,22 @@
   pointer-events: none;
 }
 .panel:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.6), 0 6px 20px rgba(238,0,58,0.02);
+  /* slight warm border hint without changing core palette */
+  border-color: rgba(238,0,58,0.02);
 }
-.panel:hover::before,
+.panel:hover::before {
+  /* expand sheen to cover the full panel on hover, keep colors subtle */
+  inset: -6% -5% -6% -5%;
+  background: linear-gradient(90deg, rgba(238,0,58,0.06), rgba(238,0,58,0.04) 35%, rgba(0,158,140,0.01) 80%);
+  opacity: 1;
+  transform: none;
+}
 .panel:hover::after {
   opacity: 1;
   transform: none;
+  filter: drop-shadow(0 4px 8px rgba(238,0,58,0.04));
 }
 
 /* Neutralize old-school hyperlink appearance inside panels */
@@ -219,6 +228,63 @@
       font-size: 14px;
     }
 
+    /* Distro buttons — reuse panel behavior but full-width and slightly different accents */
+    .distros {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .panel.distro {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 28px 36px;
+      border-left: 6px solid rgba(0,240,208,0.06);
+    }
+
+    .panel.distro:nth-child(odd) {
+      background: linear-gradient(180deg, #091012, #0b1114);
+    }
+    .panel.distro:nth-child(even) {
+      background: linear-gradient(180deg, #0b0f11, #101416);
+    }
+
+    .panel.distro::before {
+      inset: -10% -5% -10% 70%;
+      background: radial-gradient(closest-side at 15% 30%, rgba(0,240,208,0.04), transparent 18%),
+                  linear-gradient(135deg, rgba(238,0,58,0.02), rgba(0,158,140,0.01));
+      transform: rotate(-4deg) scale(1.02);
+    }
+    .panel.distro::after {
+      top: 8px;  right: -20px; 
+      width: 110px; height: 110px;
+      background: conic-gradient(from 220deg at 50% 50%, rgba(238,0,58,0.04), transparent 25%);
+    }
+
+    /* Distro hover: extend red sheen across whole button and intensify color */
+    .panel.distro:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 24px 60px rgba(238,0,58,0.06), 0 12px 28px rgba(0,0,0,0.6);
+      border-left-color: var(--virus-red);
+    }
+    .panel.distro:hover::before {
+      /* expand the sheen to cover full width and make the red portion stronger */
+      inset: -6% -5% -6% -5%;
+      background: linear-gradient(90deg, rgba(238,0,58,0.14), rgba(238,0,58,0.10) 35%, rgba(0,158,140,0.02) 80%);
+      opacity: 1;
+      transform: none;
+    }
+    .panel.distro:hover::after {
+      opacity: 1;
+      transform: none;
+      filter: drop-shadow(0 6px 10px rgba(238,0,58,0.08));
+    }
+
+    .panel.distro h2 { font-size: 18px; margin-bottom: 6px; }
+    .panel.distro p { font-size: 13px; color: #dfeff0; }
+
     .tab {
       font-size: 42px;
     }
@@ -232,7 +298,73 @@
       border: 5px solid var(--error-magenta);
       background-color: var(--terminal-gray);
     }
+    /* Class page card (distinct, easy-to-read layout) */
+    .class-card {
+      background: linear-gradient(180deg, rgba(9,12,14,0.6), rgba(6,8,10,0.55));
+      border: 2px solid var(--terminal-gray);
+      padding: 28px;
+      margin: 18px 0;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+      position: relative;
+      border-left: 6px solid rgba(238,0,58,0.04);
+    }
+    .class-header h2 { color: var(--virus-red); font-size: 26px; margin: 0 0 8px 0; }
+    .class-header .lead { color: var(--glitch-cyan-lite); margin-bottom: 12px; max-width: 80ch; }
+    .class-summary { display:flex; gap:10px; margin-bottom: 12px; flex-wrap:wrap; }
+    .chip { background: rgba(255,255,255,0.02); padding:6px 10px; border-radius:6px; border:1px solid rgba(255,255,255,0.02); font-size:13px; color:var(--glitch-cyan-lite); }
 
+    /* Left/Right class navigation buttons */
+    .class-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(10,12,14,0.8);
+      border: 2px solid rgba(255,255,255,0.03);
+      color: var(--toxic-cyan);
+      text-decoration: none;
+      transition: transform 160ms ease, background 160ms ease, color 160ms ease, border-color 160ms ease;
+      z-index: 10;
+    }
+    .class-nav.left { left: -28px; }
+    .class-nav.right { right: -28px; }
+    .class-nav svg { width: 18px; height: 18px; stroke: currentColor; }
+    .class-nav:hover {
+      transform: translateY(-50%) scale(1.06);
+      background: rgba(238,0,58,0.06);
+      color: var(--virus-red);
+      border-color: rgba(238,0,58,0.06);
+    }
+
+    /* Tabs above the class card */
+    .class-tabs {
+      display:flex; align-items:center; gap:12px; margin:18px 0; position:relative;
+    }
+    .class-tabs .tab {
+      background: transparent; border: none; color: var(--glitch-cyan-lite); padding:8px 12px; font-size:14px; cursor:pointer; border-bottom:2px solid transparent;
+    }
+    .class-tabs .tab.active, .class-tabs .tab[aria-selected="true"] {
+      color: var(--virus-red);
+      border-bottom-color: var(--virus-red);
+      font-weight:700;
+    }
+    .tab-panels { margin-top: 8px; }
+    .tab-panel { padding-top: 8px; }
+
+    /* Small arrows for switching tabs */
+    .tab-arrow {
+      margin-left: auto; /* push to right */
+      width:44px; height:36px; display:flex; align-items:center; justify-content:center; gap:6px; background:transparent; border:2px solid rgba(255,255,255,0.02); color:var(--toxic-cyan); border-radius:6px; cursor:pointer; transition: transform 120ms ease, background 120ms ease, color 120ms ease;
+    }
+    .tab-arrow svg { width:14px; height:14px; stroke: currentColor; }
+    .tab-arrow:hover { transform:scale(1.05); background: rgba(238,0,58,0.04); color: var(--virus-red); border-color: rgba(238,0,58,0.06); }
+
+    @media (max-width:900px) {
+      .class-tabs { gap:8px; }
+      .tab-arrow { width:36px; height:36px; }
+    }
     footer {
       padding: 20px;
       border-top: 4px solid var(--virus-red);
@@ -302,10 +434,32 @@
 .comp-features li { display: flex; justify-content: space-between; padding: 6px 0; border-top: 1px dashed rgba(255,255,255,0.02); }
 .comp-badge { display: inline-block; padding: 4px 8px; border-radius: 999px; background: rgba(255,255,255,0.02); color: var(--toxic-cyan); font-size: 12px; }
 
-@media (max-width: 600px) {
-  .comp-card { padding: 12px; }
-  main.container { margin-right: 0; }
-}
+
+
+  /* Small chip data card (compact, placeable) */
+  .chip-ref { color: var(--toxic-cyan); text-decoration: underline; cursor: pointer; }
+  .chip-card {
+    display: inline-block; /* so it can be placed inline or in lists */
+    max-width: 360px;
+    background: #0B0D0E;
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 10px 12px;
+    border-left: 4px solid var(--glitch-teal);
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    font-size: 13px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .chip-card h4 { margin:0 0 6px 0; color:var(--virus-red); font-size:15px; display:flex; align-items:center; gap:8px; }
+  .chip-card .chip-badge { font-size:11px; padding:3px 6px; }
+  .chip-card .chip-type { color:var(--glitch-cyan-lite); font-size:12px; margin-bottom:6px; }
+  .chip-card .chip-desc { color:var(--crt-white); margin:0; }
+
+  /* Optional smaller, popover style (use data-mode="popover") */
+  .chip-card.popover {
+    display:block; position:absolute; z-index:200; width:300px; margin-left:0; box-shadow:0 12px 40px rgba(0,0,0,0.75);
+  }
 
 /* Responsive comp-grid column fallbacks */
 @media (max-width: 1200px) {
