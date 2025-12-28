@@ -526,7 +526,7 @@
     "tier": "Rare",
     "type": "Defense",
     "tags": ["Confidence"],
-    "description": "As a reaction, become untargetable by Spirit attacks until the start of your next turn.",
+    "description": "As a minor reaction, become untargetable by Spirit attacks until the start of your next turn.",
     "flavor": "Your mind is a fortress against the ethereal."
   },
   {
@@ -905,5 +905,75 @@
     "type": "Utility",
     "tags": ["Movement"],
     "description": "Allows for a special scanning action which takes an entire turn. The action generates a digital map of the immediate area, revealing all routes, obvious terrain threats and bonuses."
-  }
+  },
+  {
+  "id": 1101,
+  "name": "Follow-Through",
+  "source": "Generic",
+  "tier": "Common",
+  "type": "Attack",
+  "tags": ["Physique", "Combo"],
+  "description": "Combo. After you successfully deal damage with a Physique-based attack, you may immediately make a second Physique attack against the same target using the same Width, provided you discard that number of die from your cache.",
+  "flavor": "You don’t stop moving. The hit is just permission."
+},
+{
+  "id": 1102,
+  "name": "Chain Reaction",
+  "source": "Generic",
+  "tier": "Uncommon",
+  "type": "Attack",
+  "tags": ["Elemental", "Combo"],
+  "description": "Combo. After you hit an entity with elemental damage, you may make a second attack against a different target within range at -1 the same width.",
+  "flavor": "The magic echoes. Someone else pays for it."
+},
+{
+  "id": 1103,
+  "name": "Source Run",
+  "source": "Sigma",
+  "tier": "Uncommon",
+  "type": "Utility",
+  "tags": ["Agility"],
+  "description": "While you have a melee weapon actively equipped, you may add +1 to your Agility increasing the distance travelled.",
+  "flavor": "An exploit has given you a great tactical advantage."
+},
+{
+  "id": 1104,
+  "name": "Hard Point",
+  "source": "Sigma",
+  "tier": "Uncommon",
+  "type": "Buff",
+  "tags": ["Defense"],
+  "description": "If you haven’t moved from where you were standing at the begining of the last turn, until; your next turn, add +1 to your Defense",
+  "flavor": "An exploit has given you a great tactical advantage."
+},
+{
+  "id": 1105,
+  "name": "Quick Scope",
+  "source": "Sigma",
+  "tier": "Uncommon",
+  "type": "Utility",
+  "tags": ["Equipment"],
+  "description": "Once per round, you can swap weapons as a free Action, and if you do you may attack as a reaction, if you discard one die from the cache. Stack effect: This Ability adds +1 Quick to your actions on the next turn.",
+  "flavor": "One shot, one kill, one second."
+},
+{
+  "id": 1106,
+  "name": "Gamer Rage",
+  "source": "Sigma",
+  "tier": "Rare",
+  "type": "Buff",
+  "tags": ["Cache"],
+  "description": "When you are damaged directly by an enemy entity, you may roll one die and add it to the cache.",
+  "flavor": "The scorn and vitriol powers resolution."
+},
+{
+  "id": 1107,
+  "name": "Combat Engineer",
+  "source": "Sigma",
+  "tier": "Rare",
+  "type": "Utility",
+  "tags": ["Engineering", "Precision"],
+  "description": "In a pinch you have learned to handle machines. You may use yyour Physique Stat to operate vehicles or machinery that would normally require Engineering. You may use any Engineering ability with a Precision roll, at the cost of 2 cache dice.",
+  "flavor": "The scorn and vitriol powers resolution."
+}
 ]
