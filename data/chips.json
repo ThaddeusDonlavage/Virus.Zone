@@ -46,7 +46,7 @@
     "tier": "Rare",
     "type": "Debuff",
     "tags": ["Ingenuity"],
-    "description": "The Width of the target entities next Ingenuity roll is reduced by the width used to activate this chip.",
+    "description": "The target of this Action's next Ingenuity Action takes a penalty equal to the Power of this Action.",
     "flavor": "Reality glitches when you rewrite its stage directions."
   },
   {
@@ -101,7 +101,7 @@
   },
   {
     "id": 1011,
-    "name": "Recompile Pulse",
+    "name": "Recompile",
     "source": "Hatter",
     "tier": "Common",
     "type": "Utility",
@@ -186,7 +186,7 @@
     "tier": "Uncommon",
     "type": "Attack",
     "tags": ["Physique"],
-    "description": "On melee hit, shove target 1–2 spaces and impose ''-1 Width'' on their next physical action.",
+    "description": "On melee hit, shove target 1–2 spaces and impose ''-1 Width'' on their next Body action.",
     "flavor": "Made with the same tech that bends steel beams."
   },
   {
@@ -196,7 +196,7 @@
     "tier": "Common",
     "type": "Utility",
     "tags": ["Engineering"],
-    "description": "Force-open any jammed or locked mechanical device with physical torque.",
+    "description": "Force-open any jammed or locked mechanical device with Body torque.",
     "flavor": "If it resists, twist harder."
   },
   {
@@ -396,7 +396,7 @@
     "tier": "Rare",
     "type": "Attack",
     "tags": ["Physique", "Precision"],
-    "description": "Convert a melee hit into a nerve strike. Target loses 1 die from their next Physical roll.",
+    "description": "Convert a melee hit into a nerve strike. Target loses 1 die from their next Body roll.",
     "flavor": "Anatomy meets interface."
   },
   {
@@ -547,7 +547,7 @@
     "type": "Control",
     "tags": ["Agility"],
     "description": "You may move one space as a Free Action on your turn, once per round.",
-    "flavor": "Fluid movement through digital and physical spaces."
+    "flavor": "Fluid movement through digital and Body spaces."
   },
   {
     "id": 1056,
@@ -555,8 +555,8 @@
     "source": "Generic",
     "tier": "Common",
     "type": "Attack",
-    "tags": ["Physical"],
-    "description": "Reaction: When an enemy leaves your melee range, make a free melee attack against them, using what Physical die you currently have.",
+    "tags": ["Body"],
+    "description": "Reaction: When an enemy leaves your melee range, make a free melee attack against them, using what Body die you currently have.",
     "flavor": "Seize the moment, strike with precision."
   },
   {
@@ -656,7 +656,7 @@
     "tier": "Uncommon",
     "type": "Defense",
     "tags": ["Physique"],
-    "description": "Gain +1 Defense to all Physical attacks.",
+    "description": "Gain +1 Defense to all Body attacks.",
     "flavor": "Absorb impact with reinforced cybernetics."
   },
   {
@@ -675,7 +675,7 @@
     "source": "Generic",
     "tier": "Uncommon",
     "type": "Control",
-    "tags": ["Ingenuity"],
+    "tags": ["Ingenuity", "String"],
     "description": "Minor Action: Add an extra stack of a status effect applied to an entity this turn.",
     "flavor": "Amplify your control over status effects."
   },
@@ -853,7 +853,7 @@
     "id": 201,
     "name": "Stand Strong",
     "source": "Sigma",
-    "tier": "rare",
+    "tier": "Rare",
     "type": "Control",
     "tags": ["Confidence"],
     "description": "As an action, you enter into a reactive stance. Until the end of the next turn, whenever an enemy targets you, you may attack with a Minor Reaction, provided they are within range.",
@@ -863,10 +863,10 @@
     "id": 202,
     "name": "Grit",
     "source": "Sigma",
-    "tier": "uncommon",
+    "tier": "Uncommon",
     "type": "Buff",
     "tags": ["Confidence"],
-    "description": "If your Confidence score is reduced, you gain a +1 to a Physical roll on the next turn.",
+    "description": "If your Confidence score is reduced, you gain a +1 to a Body roll on the next turn.",
     "flavor": "The facades of the soldier must be consumed to serve the ultimate purpose."
   },
   {
@@ -975,5 +975,165 @@
   "tags": ["Engineering", "Precision"],
   "description": "In a pinch you have learned to handle machines. You may use yyour Physique Stat to operate vehicles or machinery that would normally require Engineering. You may use any Engineering ability with a Precision roll, at the cost of 2 cache dice.",
   "flavor": "The scorn and vitriol powers resolution."
+},
+{
+  "id": 1108,
+  "name": "Imperfection",
+  "source": "Anachronaut",
+  "tier": "Rare",
+  "type": "Debuff",
+  "tags": ["Reaction"],
+  "description": "While targetting any entity with a reaction, you may choose to add the Hit-Stun quality to the effect.",
+  "flavor": "Malfunctions are a common issue with electrical discharges."
+},
+{
+  "id": 1109,
+  "name": "Critical Hit",
+  "source": "Sigma",
+  "tier": "Rare",
+  "type": "Attack",
+  "tags": ["Luck"],
+  "description": "Anytime you deal damage with an attack using 0 as the digit, ignore Defense, and add +1 to the Stack of any secondary effects inflicted by that Action.",
+  "flavor": "It's super-effective!"
+},
+{
+  "id": 1110,
+  "name": "Gift of Life",
+  "source": "Anachronaut",
+  "tier": "Rare",
+  "type": "Utility",
+  "tags": ["Healing"],
+  "description": "You gain a Touch-Ranged Action (Heal), which uses Engineering. Targetting an entity restores lost Vitality up to its maximum. This ability takes a -1 penalty by default (a trip would Heal 1 Vitality).",
+  "flavor": "Stranger things have happened in the universe."
+},
+{
+  "id": 1111,
+  "name": "Iron Fists",
+  "source": "Generic",
+  "tier": "Common",
+  "type": "Attack",
+  "tags": ["Body"],
+  "description": "You have trained in Martial Arts, and your body is considered a Versatile Weapon which you can easily wield.",
+  "flavor": "Just as you have done before, you crush all those who stand before you."
+},
+{
+    "id": 1112,
+    "name": "Unseen Eyes",
+    "source": "Anonymous",
+    "tier": "Common",
+    "type": "Utility",
+    "tags": ["Stealth"],
+    "description": "If you have the hidden condition from the previous turn, and you can see all opposed entities within the space you are hidden, gain +1 Power to all stealth Actions, as well as your passive Stealth.",
+    "flavor": "Never act until  you are certain it is the time to strike."
+},
+{
+    "id": 1113,
+    "name": "Analyze",
+    "source": "Anonymous",
+    "tier": "Rare",
+    "type": "Utility",
+    "tags": ["Stealth"],
+    "description": "As a special action that takes your entire turn, you can check for the weaknesses and stats of one entity. If you are Hidden, this can be done as a Minor Action instead.",
+    "flavor": "There may be a million ways to get rid of you. Which one is the easiest?"
+},
+{
+    "id": 1114,
+    "name": "Soft Reset",
+    "source": "Anonymous",
+    "tier": "Uncommon",
+    "type": "Control",
+    "tags": ["Reaction", "Body"],
+    "description": "If you are 5ft. away from an entity and they use a Reaction with a Body stat, you may also React to negate their Action, providing the Power of yours meets or beats the original Action strength.",
+    "flavor": "This was a calculated risk that has already been accounted for."
+},
+{
+    "id": 1115,
+    "name": "Sneak Attack",
+    "source": "Anonymous",
+    "tier": "Rare",
+    "type": "Attack",
+    "tags": ["Reaction", "Stealth"],
+    "description": "While you are considered Hidden, at the start of each round as a Reaction, you may make a Stealth Attack. This action can be used at any point in the round. ",
+    "flavor": "This was a calculated risk that has already been accounted for."
+},
+{
+    "id": 1116,
+    "name": "Ghost Protocol",
+    "source": "Anonymous",
+    "tier": "Rare",
+    "type": "Attack",
+    "tags": ["Stealth"],
+    "description": "When you are reduced to 0 Vitality, immediately roll two extra die. You are also considered Hidden until the beginning of the next round against opposing entities.",
+    "flavor": "The mission sometimes becomes more important than life itself."
+},
+{
+    "id": 1117,
+    "name": "Meme Lord",
+    "source": "Influencer",
+    "tier": "Rare",
+    "type": "Buff",
+    "tags": ["Spirit", "String"],
+    "description": "If you have already made a Spirit Action this turn, any additional Spirit Actions gain the Nice and 6-7 qualities.",
+    "flavor": "Brain rot."
+},
+{
+    "id": 1118,
+    "name": "SignalBoosting",
+    "source": "Influencer",
+    "tier": "Common",
+    "type": "Buff",
+    "tags": ["Charisma", "Combo"],
+    "description": "When you inflict any status to another entity, you may discard one die from your cache, and add a stack of that effect.",
+    "flavor": "Use your ability to amplify your own powers."
+},
+{
+    "id": 1119,
+    "name": "Live Stream",
+    "source": "Influencer",
+    "tier": "Uncommon",
+    "type": "Buff",
+    "tags": ["Charisma"],
+    "description": "As a Minor Charisma Action, you may allow another entity access to your sight.",
+    "flavor": "The mission sometimes becomes more important than life itself."
+},
+{
+    "id": 1120,
+    "name": "Direct Injection",
+    "source": "Hatter",
+    "tier": "Uncommon",
+    "type": "Control",
+    "tags": ["Digital", "Cyber"],
+    "description": "You may peform any Action that would normally only be possible within cosmOS in the living world, provided you use at least one Cache die as a part of that Action.",
+    "flavor": "Awaken, for this world and its secrets have much more to show us."
+},
+{
+    "id": 1121,
+    "name": "Root Access",
+    "source": "Generic",
+    "tier": "Uncommon",
+    "type": "Control",
+    "tags": ["Cyber"],
+    "description": "You can become the administrator of any non-magical computer you are able to log into. This takes an Action to perform but lasts until someone reverts the settings.",
+    "flavor": "We found a back door to a lot of things."
+},
+{
+    "id": 1121,
+    "name": "Black Magic Arsenal",
+    "source": "Hatter",
+    "tier": "Rare",
+    "type": "Attack",
+    "tags": ["Ingenuity"],
+    "description": "Any Ingenuity attack ignores one Stack of either Defense or Sturdy, your choice.",
+    "flavor": "Behold the power!"
+},
+{
+    "id": 1121,
+    "name": "Firewall",
+    "source": "Hatter",
+    "tier": "Rare",
+    "type": "Defense",
+    "tags": ["Cyber"],
+    "description": "As a reaction using your cache, you can choose to negate a Cyber Action that targets you directly.",
+    "flavor": "Behold the power!"
 }
 ]

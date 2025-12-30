@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "name": "Knife",
+        "category": "Weapon",
+        "size": "Small",
+        "range": "Melee",
+        "damageType": "Incision",
+        "modSlots": "0",
+        "tags": ["Versatile", "Throwable"],
+        "description": ""
+    }
+]

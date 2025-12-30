@@ -195,5 +195,12 @@
   <footer>
     VIRUS.ZONE © Virtual Veil Project
   </footer>
+    <script src="../scripts/go-back.js"></script>
+  <script>
+    // Programmatic example: place the 'Go back to Rules' button under the TOC
+    if (window.injectGoBack) {
+      window.injectGoBack({ href: '../lore.html', label: 'Lore', placement: 'outside', tocSelector: '#toc-container' });
+    }
+  </script>
 </body>
 </html>

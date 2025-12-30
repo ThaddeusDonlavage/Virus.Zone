@@ -412,6 +412,38 @@
 .toc-list a:hover { text-decoration: underline; }
 .toc-list a.active { color: var(--virus-red); font-weight: bold; }
 
+/* Re-usable "Go back" button (styled like a small panel link) */
+.toc-go-back {
+  display: block;
+  margin-top: 12px;
+  padding: 12px 14px;
+  text-align: center;
+  background: linear-gradient(180deg, #0C0F12, #0E1418);
+  border: 2px solid var(--terminal-gray);
+  color: var(--toxic-cyan);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: transform 160ms ease, box-shadow 160ms ease, color 160ms ease, background 160ms ease;
+  box-shadow: none;
+}
+.toc-go-back:focus { outline: 2px solid rgba(0,240,208,0.12); outline-offset: 2px; }
+.toc-go-back:hover, .toc-go-back:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+  color: var(--virus-red);
+  background: linear-gradient(180deg, #0E1113, #121416);
+  border-left-color: var(--virus-red);
+}
+
+/* When fixed (positioned under the TOC), ensure it remains on top and uses box-sizing */
+.toc-go-back.fixed { z-index: 1300; box-sizing: border-box; margin-top: 0; }
+
+/* Keep the default (inside-TOC) styles intact: they are block-level and fit the TOC column */
+.toc-container .toc-go-back { display:block; }
+
+
 /* Responsive: hide TOC on small screens and show a small toggle */
 @media (max-width: 900px) {
   .toc-container { display: none; }

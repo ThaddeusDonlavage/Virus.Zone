@@ -30,15 +30,16 @@
 
     <section class="content">
        <h3>also see</h3>
-    <section class="sections">
-      <a class="panel" id="panels" href="rules/combat.html" aria-label="combat">
+    <div class="distros" aria-label="Other Rules">
+
+      <a class="panel distro" id="panels" href="rules/combat.html" aria-label="combat">
 
         <h2> Combat Rules </h2></a>
 
-      <a class="panel" id="panels" href="rules/distros.html" aria-label="distro">
-        <h2> Character Distrubtions </h2></a>
-
-    </section>
+      <a class="panel distro" id="panels" href="rules/distros.html" aria-label="distro">
+        <h2> OS Distributions </h2></a>
+        #TODO Add Equipment Section 
+    </div>
 
 
       <h2 id="core-concept">Core Concept</h2>
@@ -142,11 +143,18 @@
 
       <h2 id="comp-stats">COMP Stats</h2>
       <p>Along with the stats that define the Player Character, each character sheet will also have the stats of the COMP.</p>
-      <p><strong>Distribution:</strong> A major decision at the begininng of the game is which COMP Distribution the player will choose for their character. Each distribution has its own unique set of stats that define its capabilities and playstyle, and may be locked out of certain abilities or features.</p>
+      <p><strong>Distribution:</strong> A major decision at the begining of the game is which COMP Distribution the player will choose for their character. Each distribution has its own unique set of stats that define its capabilities and playstyle, and may be locked out of certain abilities or features.</p>
 
       <p><strong>Processing Power:</strong> This defines the maximum amount of Chips that can be used. New weapons, powers or abilities require Chips to properly integrate with a COMP.</p>
 
       <p><strong>Thread Count:</strong> The maximum number of simultaneous processes the COMP can handle. In game terms, this means that this is the maximum number of skills you can utilize at once. By default and for more characters, the Thread Count is set to 1.</p>
+
+      <h3>Caching</h3>
+      <p>Whenever you intially turn on your COMP to use its powers, you can roll a number of dice equal to your cache size. These can be used as a part of the totals of any of the Actions you use for the remainder of your COMP session. Additionally certain Basic and Minor Actions require cache dice to be activated. </p>
+      <p>If the number of cache dice ever exceeds the max size from your COMP you must immediately discard one.</p>
+
+      <h3>Battery Life</h3>
+      <p>Battery Life represents the amount of time the COMP can be used before it needs to plugged in. Due to the taxing nature of entering cosmOS, charging time is always 1 to 1 with recovering battery life. In the event that a COMP stops operating while being actively used, the COMP user will be logged out of their COMP and cannot use any of its features until it can be charged.</p>
 
       <h2 id="combat">Combat</h2>
       <p>Sometimes you need to fight. When combat begins the Compiler must clearly announce the start of combat. Immediately after the announcement, each character rolls a <strong>Prediction</strong> roll (similar to Initiative in other systems) to determine reaction order.</p>
@@ -174,19 +182,38 @@
       </ul>
 
       <h3>Faults & Errors</h3>
-      <p>Fault Dice represent system or bodily damage. When rolling Fault Dice, which happens at the end of every turn, what would normally be a success, now results in the addition of an Error Die, which is added to the cache, and the depletion of one point of Vitality. Once an entitie's Vitality reaches zero, they are considered out of commission until they can be revived. In the Digital World, the COMP will immediately evacuate its user; in the Physical World the character is incapacitated for the scene, or worse if the Compiler deems the situation to be grave enough.</p>
+      <p>Fault Dice represent the toll of taking system or bodily damage. For each subtraction of stats, you must roll one Fault Die and then add it to your cache. If any Fault die could be used as a dub, then you must do so immediately are considered Injured. Consult the Injury Severity list for the results going forward until the Injury can be healed. At the end of each round, all players must reroll all of their fault die that were not added to the cache this turn.</p>
 
-      <p><strong>Other Entity Damage Methods:</strong> In many instances, especially for weaker enemies, its recommended to skip the Fault Roll system for taking damage, and instead directly subtracting out the Vitality of the entity.  </p>
-      
-      <p>At the end of each entity's turn, they roll all Fault dice. Any successes inflict a harder-to-heal status and escalate consequences; repeated Fault successes increase severity.</p>
+      <p>Fault Dice are all removed once combat ends the entity goes to a stable location.</p>
 
-      <h4>Injury Severity</h4>
+       <p><strong>Other Entity Damage Methods:</strong> In many instances, especially for weaker enemies, its recommended to skip the Fault Roll system for taking damage, and instead directly subtracting out the Vitality of the entity. Some of the generic Sprites built in the world to explicitly be mobs, may only have a unique stat called Health that is universally targetted with all attacks.</p>
+
       <ul>
         <li><strong>Minor Injury (dub):</strong> 1 Error Die rolled for each action</li>
         <li><strong>Moderate Injury (trip):</strong> 2 Error Dice rolled for each action</li>
         <li><strong>Severe Injury (quad):</strong> 3 Error Dice rolled for each action</li>
-        <li><strong>Critical Injury:</strong> Incapacitation + Risk of Death</li>
+        <li><strong>Critical Injury:</strong> Incapacitation</li>
       </ul>
+
+      <h3>Damage</h3>
+
+      <p>There are multiple ways to target and subdue enemies. </p>
+        
+      <p>Typically, most attacks, especially the physical variety target the opposing entities Vitality. Additionally Spirit attacks which deal with the mental clarity or willpower reduce the opponent's Confidence. Finally, Cyber cannot fully eliminate the living from a situation but reducing the Cyber score would completely remove their ability to control technology or their COMP.</p>
+
+        <ul>
+        <li><strong>If Confidence Reaches 0:</strong> The entity is considered Incapacitated immediately until healed.</li>
+        <li><strong>If Cyber Reaches 0:</strong> The entity is fully logged out of cosmOS and the COMP. If they are a natively digital entity, they are completely wiped from reality. Living entities lose access to any and all supernatural abilities until healed.</li>
+        <li><strong>If Vitality Reaches 0:</strong> The entity becomes Incapacitated. If they are a fully living creature then this is delayed until the end of the Round, and they can still make Actions with a -1 Power penalty until that point. If the damage received after hitting zero equals the maximum Vitality of that entity, they are instead killed, and cannot be healed outside of black magic.</li>
+        <li><strong>If the number of Injuries exceeds 3:</strong> The entity has become Incapacitated as a part of an internal glitch. If a Demon suffers from this, they will forcibly split into multiple smaller Sprites in their host Node, often resembling elements of themselves and the context of the glitch. A living entity cannot recover from being incapacitated until the COMP is broken. The Veil spreads forcibly.</li>
+      </ul>
+
+      <h3>Healing</h3>
+
+      <p>There are ways to come back from even the brink of death, provided you stay in the land of the living.</p>
+      <p>Vitality and Confidence losses can return on their own provided that that they didn't come with an injury, at a rate of recovering one per day. If their are Injuries associated with these, then a professional is required to tend to the entity for that period for the healing period to count. The nature of the professional could be anything from a Doctor, Psychologist, Priest, Witch-Doctor, or attuned Sprite, as long as the context makes sense. </p>
+      <p>Cyber damage not only represents the raw technical prowess of the COMP, but also the worth of the equipment of the user. These wounds require a Engineering check meeting or exceeding the Cyber score in order to recover. This is a special action that can be performed by anyone, but must be done in the Physical World, without any influence of The Veil or cosmOS.</p>
+
     </section>
     <section class="sections">
 
@@ -212,4 +239,11 @@
   </footer>
 </body>
     <script src="toc.js"></script>
+    <script src="../scripts/go-back.js"></script>
+  <script>
+    // Programmatic example: place the 'Go back to Rules' button under the TOC
+    if (window.injectGoBack) {
+      window.injectGoBack({ href: 'index.html', label: 'Home', placement: 'outside', tocSelector: '#toc-container' });
+    }
+  </script>
 </html>
