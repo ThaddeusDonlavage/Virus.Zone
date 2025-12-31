@@ -503,11 +503,11 @@
     "id": 1051,
     "name": "Warm Presence",
     "source": "Influencer",
-    "tier": "Uncommon",
+    "tier": "Rare",
     "type": "Utility",
     "tags": ["Charisma"],
     "description": "When you target an entity with a Charisma Action, you may choose to remove one Fault Die, once per turn.",
-    "flavor": "A cloak woven from pure data streams."
+    "flavor": "A gift woven from pure sweet streams."
   },
   {
     "id": 1052,
@@ -526,7 +526,7 @@
     "tier": "Rare",
     "type": "Defense",
     "tags": ["Confidence"],
-    "description": "As a minor reaction, become untargetable by Spirit attacks until the start of your next turn.",
+    "description": "As a minor reaction, become untargetable by Spirit attacks until the start of your next turn. Your next roll has +1 Error.",
     "flavor": "Your mind is a fortress against the ethereal."
   },
   {
@@ -873,10 +873,10 @@
     "id": 203,
     "name": "Go Viral",
     "source": "Influencer",
-    "tier": "Common",
-    "type": "Utility",
+    "tier": "Uncommon",
+    "type": "Debuff",
     "tags": ["Charisma"],
-    "description": "While targetting an entity, you may  choose to discard one cache die. The target gains the Viral status. You can roll an additional die when targetting that entity with a Charisma ability while they have the Viral status.",
+    "description": "While targetting an entity, you may  choose to discard one cache die. The target gains the Viral status. While targetting that entity with a Charisma ability while they have the Viral status the Power of that action increases by 1.",
     "flavor": "Sometimes you need to wait until people care, and then it will be the time to strike."
   },
   {
@@ -1032,7 +1032,7 @@
     "source": "Anonymous",
     "tier": "Rare",
     "type": "Utility",
-    "tags": ["Stealth"],
+    "tags": ["Wit"],
     "description": "As a special action that takes your entire turn, you can check for the weaknesses and stats of one entity. If you are Hidden, this can be done as a Minor Action instead.",
     "flavor": "There may be a million ways to get rid of you. Which one is the easiest?"
 },
@@ -1070,10 +1070,10 @@
     "id": 1117,
     "name": "Meme Lord",
     "source": "Influencer",
-    "tier": "Rare",
+    "tier": "Uncommon",
     "type": "Buff",
     "tags": ["Spirit", "String"],
-    "description": "If you have already made a Spirit Action this turn, any additional Spirit Actions gain the Nice and 6-7 qualities.",
+    "description": "If you have already made a Spirit Action this turn, any additional Spirit Actions gain the Nice quality.",
     "flavor": "Brain rot."
 },
 {
@@ -1133,7 +1133,208 @@
     "tier": "Rare",
     "type": "Defense",
     "tags": ["Cyber"],
-    "description": "As a reaction using your cache, you can choose to negate a Cyber Action that targets you directly.",
+    "description": "As a reaction using your cache, you can choose to negate a Cyber Action that targets you directly, provided it meets or beats the Power score.",
     "flavor": "Behold the power!"
+},
+{
+    "id": 1122,
+    "name": "Greater Evasion",
+    "source": "Anonymous",
+    "tier": "Rare",
+    "type": "Defense",
+    "tags": ["Acrobats", "Defense"],
+    "description": "As a reaction using at least one of your cache die, you may instead negate the effect.",
+    "flavor": "The mission sometimes becomes more important than life itself."
+},
+{
+    "id": 1123,
+    "name": "Cloak and Dagger",
+    "source": "Anonymous",
+    "tier": "Uncommon",
+    "type": "Attack",
+    "tags": ["Reaction", "Combo"],
+    "description": "Whenever you perform a successful attack as a reaction, as a Minor Action you can follow-up with a Minor Action melee attack for +1 damage. Stack Effect: Damage increases for each level of Cloak and Dagger.",
+    "flavor": "If it takes one million stabs in the back, so be it."
+},
+{
+    "id": 1124,
+    "name": "Disarm",
+    "source": "Anonymous",
+    "tier": "Rare",
+    "type": "Attack",
+    "tags": ["Acrobats"],
+    "description": "If you perform an Acrobatics attack against an entity before their turn, apply Hit-Stun.",
+    "flavor": "You're too slow (;"
+},
+{
+    "id": 1125,
+    "name": "Digital Footprint",
+    "source": "Anonymous",
+    "tier": "Rare",
+    "type": "Buff",
+    "tags": ["Acrobats", "Digital", "Defense"],
+    "description": "After each Acrobats Action, gain +1 Integrity until the start of the next round.",
+    "flavor": "You can move too fast to be hacked. "
+},
+{
+    "id": 1126,
+    "name": "Prop Hunt",
+    "source": "Anonymous",
+    "tier": "Rare",
+    "type": "Utility",
+    "tags": ["Wit"],
+    "description": "As an action, you can create cover for yourself to hide better. This cover takes up an entire space, and can provide a Hidden bonus equal to the Power of the action. Stack: The maximum number of placeable Props increases.",
+    "flavor": "With this we can blend right in."
+},
+{
+    "id": 1127,
+    "name": "6-7",
+    "source": "Influencer",
+    "tier": "Rare",
+    "type": "Utility",
+    "tags": ["Luck"],
+    "description": "As a minor action, you can provide the following bonus to yourself or an ally within 15 ft: All 6 and 7 digits can be matched as pairs.",
+    "flavor": "With this we can blend right in."
+},
+{
+    "id": 1128,
+    "name": "Heart React",
+    "source": "Influencer",
+    "tier": "Rare",
+    "type": "Utility",
+    "tags": ["Performance", "Support"],
+    "description": "As a minor Performance reaction, you can touch any entity, and remove 1 of their Error die.",
+    "flavor": "I really like what you did there."
+},
+{
+    "id": 1129,
+    "name": "Social Parasite",
+    "source": "Influencer",
+    "tier": "Rare",
+    "type": "Buff",
+    "tags": ["Performance", "Combo"],
+    "description": "You you successfully target an entity with a Performance Action, you may choose to use a cache die for a Minor Action, you can apply any modifier they have to yourself.",
+    "flavor": "Anything you can do, I can do better"
+},
+{
+    "id": 1130,
+    "name": "Flame War",
+    "source": "Influencer",
+    "tier": "Uncommon",
+    "type": "Attack",
+    "tags": ["Charisma", "String", "Fire"],
+    "description": "If you attack an entity more than once before your next turn, each successive attack applies +1 Burn to the target.",
+    "flavor": "You are messing with the wrong person."
+},
+{
+    "id": 1131,
+    "name": "Acts of Healing",
+    "source": "Influencer",
+    "tier": "Rare",
+    "type": "Utility",
+    "tags": ["Spirit", "Healing"],
+    "description": "You gain the ability to recover lost strength. As a Performance action, you may choose to Heal any Spirit stats, back up to their maximum.",
+    "flavor": "This gift should be used wisely."
+},
+{
+    "id": 1132,
+    "name": "Encouragement",
+    "source": "Influencer",
+    "tier": "Rare",
+    "type": "Utility",
+    "tags": ["Luck", "Wit"],
+    "description": "When you Out-think, you can allow one ally within 15ft reroll one die of their choice.",
+    "flavor": "This gift should be used wisely."
+},
+{
+    "id": 1133,
+    "name": "Elemental Attunement",
+    "source": "Anachronaut",
+    "tier": "Uncommon",
+    "type": "Utility",
+    "tags": ["Equipment"],
+    "description": "As a minor action, you can choose to change the damage type of a weapon to either Ice, Electric or Dark. This lasts until the end of the scene.",
+    "flavor": "With the forces of the elementals, you should fear the power."
+},
+{
+    "id": 1134,
+    "name": "Patchwork",
+    "source": "Anachronaut",
+    "tier": "Common",
+    "type": "Utility",
+    "tags": ["Engineering", "Healing"],
+    "description": "As an action, using at least 1 Cache Die, you may Heal one Cyber to any willing entity within touch range.",
+    "flavor": "With my hands you will continue to run."
+},
+{
+    "id": 1135,
+    "name": "Boot Camp",
+    "source": "Anachronaut",
+    "tier": "Rare",
+    "type": "Control",
+    "tags": ["Equipment"],
+    "description": "You may equip to two chips, which you normally would not qualify to equip.",
+    "flavor": "The hardware is good, it should be able to run anything."
+},
+{
+    "id": 1136,
+    "name": "Voyager",
+    "source": "Anachronaut",
+    "tier": "Uncommon",
+    "type": "Control",
+    "tags": ["Movement"],
+    "description": "You naturally extend your movement by 5ft.",
+    "flavor": "The hardware is good, it should be able to run anything."
+},
+{
+    "id": 1137,
+    "name": "Volt Surge",
+    "source": "Anachronaut",
+    "tier": "Uncommon",
+    "type": "Debuff",
+    "tags": ["Engineering", "Status"],
+    "description": "You again a Special Minor Action. You can touch a willing entity, the next an another entity targets the willing target, they suffer the Shocked status effect immediately. This wears off at the start of your next turn.",
+    "flavor": "The hardware is good, it should be able to run anything."
+},
+{
+    "id": 1138,
+    "name": "Rapid Fire",
+    "source": "Anachronaut",
+    "tier": "Uncommon",
+    "type": "Attack",
+    "tags": ["Precision"],
+    "description": "If you use cache die on any Precision attack, you can instead target all enemy entities within range, with -1 Power. Stack Effect: This ability gains +1 Piercing. ",
+    "flavor": "The hardware is good, it should be able to run anything."
+},
+{
+    "id": 1139,
+    "name": "Mulligan",
+    "source": "Anachronaut",
+    "tier": "Rare",
+    "type": "Control",
+    "tags": ["Luck", "Reaction"],
+    "description": "As a reaction, At the cost of turning a regular cache die into a fault die, you can choose to reroll all dice in the register. You cannot activate this ability if you have done anything else earlier this round. ",
+    "flavor": "Sometimes, the best thing you need is a fresh start."
+},
+{
+    "id": 1140,
+    "name": "Stack Overflow",
+    "source": "Hatter",
+    "tier": "Rare",
+    "type": "Attack",
+    "tags": ["Status", "String"],
+    "description": "As a minor action, if any enemy entity has 3 or more status effects, you can choose one status and remove it. Inflict Cyber damage equal to its remaining duration.",
+    "flavor": "Too much data makes it easy to break in."
+},
+{
+    "id": 1141,
+    "name": "Wormhole Shot",
+    "source": "Anachronaut",
+    "tier": "Rare",
+    "type": "Attack",
+    "tags": ["Precision", "Movement"],
+    "description": "You can expend one cache die while using a Precision attack to ",
+    "flavor": "Too much data makes it easy to break in."
 }
+
 ]
