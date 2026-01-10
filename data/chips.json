@@ -1333,7 +1333,7 @@
     "tier": "Rare",
     "type": "Attack",
     "tags": ["Precision", "Movement"],
-    "description": "You can expend one cache die while using a Precision attack to ",
+    "description": "You can expend one cache die while using a Precision attack to move to a space beside the target.",
     "flavor": "Too much data makes it easy to break in."
 }
 

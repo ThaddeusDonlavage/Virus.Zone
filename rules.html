@@ -29,15 +29,18 @@
     </section>
 
     <section class="content">
-       <h3>also see</h3>
+       <h3>Rule Sections</h3>
     <div class="distros" aria-label="Other Rules">
 
       <a class="panel distro" id="panels" href="rules/combat.html" aria-label="combat">
-
         <h2> Combat Rules </h2></a>
 
       <a class="panel distro" id="panels" href="rules/distros.html" aria-label="distro">
-        <h2> OS Distributions </h2></a>
+        <h2> OS Distributions (Character Classes) </h2></a>
+
+      <a class="panel distro" id="panels" href="rules/chips.html" aria-label="chips">
+        <h2>Chip Rules</h2> </a>
+
         #TODO Add Equipment Section 
     </div>
 
@@ -103,7 +106,10 @@
       <p>Any action which can be completed with less than a dub, usually a singular die. Sometimes, in the heat of the moment, it may be difficult to complete tasks that would otherwise be trivial. These are referred to as Minor Actions. Minor Actions can be performed in tandem with any other normal actions on a turn, provided there is at least one die that can be used for it. For example, getting back up from the ground is a Minor Action. These do not count as Combos or Strings.</p>
 
       <h3>Special Actions</h3>
-      <p>Special Actions are only possible by unleashing the primal power deep within cosmOS. Special Actions have a minimum requirement of dice that must be made up of dice exclusively in the cache.</p>
+      <p>Special Actions involve particular abilities that do not fit the standard pairing system. For instance there could be an ability that requires "777" or "789" as a single set to function properly.</p>
+
+      <h3>Cache Cost</h3>
+      <p>Certain actions may also have a cache cost. This means one or all of the set used must be from the pool of cache die.</p>
 
       <h3>Combos and Strings</h3>
       <p>Normally each action coincides with one roll from the register. There are certain triggers which allow multiple actions to be taken in quick succession within the same round. Since the actions are occurring in the same round, the register will remain on the board.</p>
@@ -111,6 +117,18 @@
       <p><strong>Combo:</strong> Any Action that will always be allowed to be completed as a secondary after an initial action takes place on that turn.</p>
 
       <p><strong>String:</strong> A second independent action done within that turn which is not dependent on the first.</p>
+
+      <h3>Action Ranges</h3>
+      Each action has a range associated with it, which defines how far away the target of the action can be. The main measure of the game is 'squares', defined as a 5ftx5ft plane within the play space. When counting distance, you may only travel in horizontal and vertical directions. In general, the measurement of range is abstracted into multiple levels:
+
+      <ul>
+        <li><strong>Self:</strong>This is ability that can only target the one using the ability or Action.</li><br>
+        <li><strong>Close:</strong> Involve all melee or Point Blank abilities, which can only target entities within neighboring squares of the target.</li><br>
+        <li><strong>Short:</strong> Abilities that can target entities within 3 squares of the user.</li><br>
+        <li><strong>Long:</strong> Abilities that can target entities farther than 3 squares away and up to 6 squares away.</li><br>
+      </ul>
+
+      <p>Both Short and Long Range abilities often come with specializations that will allow modifications of these actions outside of their natural range, usually at a penalty.</p>
 
       <h2 id="physical-stats">Body Stats</h2>
       <p><strong>Agility:</strong> How fast are you? If you want a character that’s quick on their toes and has great reaction time, you’d want high Agility. Agility controls physical speed and also the speed by which your hands and body can interface with the digital world. Agility can also be used to avoid taking damage.</p>
@@ -154,7 +172,7 @@
       <p>If the number of cache dice ever exceeds the max size from your COMP you must immediately discard one.</p>
 
       <h3>Battery Life</h3>
-      <p>Battery Life represents the amount of time the COMP can be used before it needs to plugged in. Due to the taxing nature of entering cosmOS, charging time is always 1 to 1 with recovering battery life. In the event that a COMP stops operating while being actively used, the COMP user will be logged out of their COMP and cannot use any of its features until it can be charged.</p>
+      <p>Battery Life represents the amount of time the COMP can be used before it needs to plugged in. Due to the taxing nature of entering cosmOS, charging time is always 1 to 1 with recovering battery life, and can be safely left plugged in while active, giving the user unlimited use time within the area around the vicinity of the COMP, roughly one building's range. In the event that a COMP stops operating while being actively used, the COMP user will be logged out of their COMP and cannot use any of its features until it can be charged.</p>
 
       <h2>Defensive Stats</h2>
       <h3>Defense</h3>
@@ -164,33 +182,67 @@
       <h3>Resolve</h3>
       <p>Resolve is the defense for any Psychic or Spiritual attacks, like an non-corporeal magics or some taunts. By default, it's default value is 0.</p>
 
+      <h2>Movement</h2>
+      <p>The game can be played through a 'frame of mind' context, but it is strongly recommended to use a square grid to keep track of players and other entities. Each turn a player has can be used moving around a physical or digital space. Each square of the grid represents a 5ft by 5ft square.</p>
+      <p>By default, a player can move up to their Agility score, in any direction they choose, horizontal or vertical.</p>
+      <p>Each turn, movement can by increased an additional space, by using a Minor Action.</p>
+      <p>If you are actively using the Agility stat for your actions this turn, you also gain additional movement equal to half your Agility score, rounded down.</p>
+
       <h2 id="combat">Combat</h2>
       <p>Sometimes you need to fight. When combat begins the Compiler must clearly announce the start of combat. Immediately after the announcement, each character rolls a <strong>Prediction</strong> roll (similar to Initiative in other systems) to determine reaction order.</p>
 
+      <h3>Starting Combat</h3>
+      <p> At the start of each combat, the order which everyone needs to take their turn and declares their actions needs to be determined. There are two scores that control this flow of battle, Initiative and Out-Think.</p>
+
+      <ul
+
+        <li><strong>Prediction Phase: </strong>At the begining of each combat, each entity rolls their <strong>Wit</strong>, and the result is their <em>Outthink Value</em>. Certain abilities and moves have the Prediction Quality, which will allow them circumvent opposing entities, if the Out-Think Value is higher. Examples could include a Sneak Attack, Dodge or Parry.</li>
+
+        <p></p>
+
+        <li><strong>Initiative Phase: </strong>After defining the Outthink Values, each entity rolls their Initiative to determine the timing of the actions occuring, going forward as well. In the physical world and in areas affected by the Veil, the intiative roll uses the <strong>Agility</strong> score. Within cosmOS, use the <strong>Precision</strong> score.</li>
+
+        <p></p>
+
+      </ul>
+      
+
       <h3>Phases of Combat</h3>
+      <p>Combat follows the general pattern, sequential Rounds, defined as a space of time roughly equal to 10 seconds. </p>
 
       <ul>
-        <li><strong>Prediction Phase: </strong>At the begining of each combat, each entity rolls their <strong>Wit</strong>, and the result is their <em>Outthink Value</em>. Certain abilities and moves have the Prediction Quality, which will allow them circumvent opposing entities, if the Outthink Value is higher. Examples could include a Sneak Attack, Dodge or Parry.</li>
+        <li><strong>Call Phase: </strong> All active entities act in order from lowest Outthink Value to highest to declare their intended <strong>Called Stat</strong>. The Called Action's only requirement, is that you must select a stat to use for your ability. The ability is rolled and added to the register until the start of that entity's turn. Once all active entities have Called, and rolled for the start of the turn, the Resolution Phase begins.</li>
 
         <p></p>
 
-        <li><strong>Initiative Phase: </strong>After defining the Outthink Values, each entity rolls their Physical Initiative to determine the order of actions, going forward as well. In the physical world and in areas affected by the Veil, the intiative roll uses the <strong>Agility</strong> score. Within cosmOS, use the <strong>Precision</strong> score.</li>
-
-        <p></p>
-
-        <li><strong>Call Phase: </strong> All active entities act in order from lowest Outthink Value to highest to declare their intended <strong>Called Action</strong>. The Called Action's only requirement, is that you must select a stat to use for your ability. The ability is rolled and added to the register but does not resolve until the start of that entity's turn. Once all Called Actions are declared, the Resolution Phase begins.</li>
-
-        <p></p>
-
-        <li><strong>Resolution Phase: </strong> Each entity takes their turn in order of Physical Initiative, resolving their Called Action first, then any other actions they can take with their remaining dice. Many abilities may affect the register over the course of the turn, which may change available abilities at the time of their use. Additionally, reactions may be used outside of the turn order. You may use a Reaction at any point in the initiative where your Outthink Value is higher than the current Initiative.</li>
+        <li><strong>Resolution Phase: </strong> Each entity takes their turn in order of Initiative, making as many  actions as they are capable with the dice in their register, until they end their turn. Many abilities may affect the register over the course of the turn, which may change available abilities at the time of their use. Additionally, reactions may be used outside of the turn order. You may use a Reaction at any point in the initiative where your Outthink Value is higher than the current Initiative.</li>
 
         <p></p>
 
         <li><strong>End Phase: </strong>Once all entities have taken their turn, the round ends. Any effects that last until the end of the round expire, and a new round begins starting again at the Call Phase. The affects of taking damage are also finalized at this phase</li>
       </ul>
 
+      <strong>Reactions:</strong> Many abilities may become applicable outside of the normal turn order, which may change the time of their use. Reactions are not their own phase, but may be used outside of the turn order and the phase structure, provided their specific conditions are met. You may use a Reaction targetted at yourself at any point if your Out-Think score exceeds the current Initiative. If you target another entity, your Out-think must exceed or meet theirs. There are several abilities that can raise and lower Out-Think and Initiative over the course of Combat. </li>
+
+      <h2>Injuries</h2>
+
+            <h3>Damage</h3>
+
+      <p>There are multiple ways to target and subdue enemies. </p>
+        
+      <p>Typically, most attacks, especially the physical variety target the opposing entities Vitality. Additionally Spirit attacks which deal with the mental clarity or willpower reduce the opponent's Confidence. Finally, Cyber cannot fully eliminate the living from a situation but reducing the Cyber score would completely remove their ability to control technology or their COMP.</p>
+
+        <ul>
+        <li><strong>If Confidence Reaches 0:</strong> The entity is considered Incapacitated from a mental break until healed.</li><br>
+        <li><strong>If Cyber Reaches 0:</strong> The entity is fully logged out of cosmOS and the COMP. If they are a natively digital entity, they are completely wiped from reality. Living entities lose access to any and all supernatural abilities until healed.</li><br>
+        <li><strong>If Vitality Reaches 0:</strong> The entity becomes Incapacitated. If they are a fully living creature then this is delayed until the end of the Round, and they can still make Actions with a -1 Power penalty until that point. If the damage received after hitting zero equals the maximum Vitality of that entity, they are instead killed, and cannot be healed outside of black magic.</li><br>
+        <li><strong>If the number of Injuries exceeds 3:</strong> The entity has become Incapacitated as a part of an internal glitch. If a Demon suffers from this, they will forcibly split into multiple smaller Sprites in their host Node, often resembling elements of themselves and the context of the glitch. A living entity cannot recover from being incapacitated until the COMP is broken. The Veil spreads forcibly.</li><br>
+      </ul>
+
       <h3>Faults & Errors</h3>
-      <p>Fault Dice represent the toll of taking system or bodily damage. For each subtraction of stats, you must roll one Fault Die and then add it to your cache. If any Fault die could be used as a dub, then you must do so immediately are considered Injured. Consult the Injury Severity list for the results going forward until the Injury can be healed. At the end of each round, all players must reroll all of their fault die that were not added to the cache this turn.</p>
+      <p>Faults represent the toll of lasting damage from combat.</p>
+      
+      <p>Each time you take damage to Confidence, Cyber or Vitality you must add a Fault Die to your cache. Fault Die have a special property in that they cannot be used for actions, and any pairs of matching Fault die result in a Injury, at which point the dice are removed. Consult the Injury Severity list for the results going forward until the Injury can be healed.</p>
 
       <p>Fault Dice are all removed once combat ends the entity goes to a stable location.</p>
 
@@ -203,27 +255,21 @@
         <li><strong>Critical Injury:</strong> Incapacitation</li>
       </ul>
 
-      <h3>Damage</h3>
 
-      <p>There are multiple ways to target and subdue enemies. </p>
-        
-      <p>Typically, most attacks, especially the physical variety target the opposing entities Vitality. Additionally Spirit attacks which deal with the mental clarity or willpower reduce the opponent's Confidence. Finally, Cyber cannot fully eliminate the living from a situation but reducing the Cyber score would completely remove their ability to control technology or their COMP.</p>
-
-        <ul>
-        <li><strong>If Confidence Reaches 0:</strong> The entity is considered Incapacitated immediately until healed.</li>
-        <li><strong>If Cyber Reaches 0:</strong> The entity is fully logged out of cosmOS and the COMP. If they are a natively digital entity, they are completely wiped from reality. Living entities lose access to any and all supernatural abilities until healed.</li>
-        <li><strong>If Vitality Reaches 0:</strong> The entity becomes Incapacitated. If they are a fully living creature then this is delayed until the end of the Round, and they can still make Actions with a -1 Power penalty until that point. If the damage received after hitting zero equals the maximum Vitality of that entity, they are instead killed, and cannot be healed outside of black magic.</li>
-        <li><strong>If the number of Injuries exceeds 3:</strong> The entity has become Incapacitated as a part of an internal glitch. If a Demon suffers from this, they will forcibly split into multiple smaller Sprites in their host Node, often resembling elements of themselves and the context of the glitch. A living entity cannot recover from being incapacitated until the COMP is broken. The Veil spreads forcibly.</li>
-      </ul>
 
       <h3>Healing</h3>
 
       <p>There are ways to come back from even the brink of death, provided you stay in the land of the living.</p>
-      <p>Vitality and Confidence losses can return on their own provided that that they didn't come with an injury, at a rate of recovering one per day. If their are Injuries associated with these, then a professional is required to tend to the entity for that period for the healing period to count. The nature of the professional could be anything from a Doctor, Psychologist, Priest, Witch-Doctor, or attuned Sprite, as long as the context makes sense. </p>
-      <p>Cyber damage not only represents the raw technical prowess of the COMP, but also the worth of the equipment of the user. These wounds require a Engineering check meeting or exceeding the Cyber score in order to recover. This is a special action that can be performed by anyone, but must be done in the Physical World, without any influence of The Veil or cosmOS.</p>
+      <p>Vitality and Confidence losses can return on their own provided that that they didn't come with an injury, at a rate of recovering one per day. If there is an Injury associated with these losses, then a professional is required to tend to the entity for that period for the healing period to count. The nature of the professional could be anything from a Doctor, Psychologist, Priest, Witch-Doctor, or attuned Sprite, as long as the context makes sense. </p>
+      <p>Cyber damage not only represents the raw technical prowess of the COMP, but also the worth of the equipment of the user. Healing these wounds require a Engineering check meeting or exceeding the Cyber score that we are attempting to raise back to. This is a Engineering check that can be performed by anyone, but must be done in the Physical World, without any influence of The Veil or cosmOS, and takes takes 1 hour per Point in the Cyber Stat. If the Repair check fails, then you must wait 1 day before trying again. </p>
 
+
+   
     </section>
+   <h2> Lookup Tables</h2>
     <section class="sections">
+
+
 
       <a class="panel" id="comps" href="rules/comps.html" aria-label="COMPs">
       <h2> COMPs </h2>
@@ -240,9 +286,16 @@
 
 
     </section>
+      <!-- Page navigation: previous/next links -->
+                 <nav class="page-nav">
+      <a class="prev page-nav-prev" href="index.html">Go to Home</a>
+      <a class="next page-nav-next" href="rules/equipment.html">Go to Equipment Rules</a>
+    </nav>
+
   </main>
 
   <footer>
+
     VIRUS.ZONE © Virtual Veil Project
   </footer>
 </body>

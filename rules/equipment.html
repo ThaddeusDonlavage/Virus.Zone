@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles.css">
+  <title>VIRUS.ZONE — Page Title</title>
+  <link rel="icon" type="image/x-icon" href="../src/favicon.png">
+</head>
+<body>
+  <div id="header-container"></div>
+  <script src="../load-header.js"></script>
+  <script src="../auto-toc.js"></script>
+  <script src="../scripts/comps-render.js"></script>
+
+
+  <main class="container">
+
+    <section class="hero">
+        <h1>Equipment</h1>
+        <p>A special tool in the back pocket might be the difference between life and death.</p>
+    </section>
+
+
+      <section class="content">
+        <p>There can be, many things that affect gameplay, not purely limited to the raw power of an entity or the properties of a program. Equipment is anything that can be added or used in order to alter the flow or stats of that entity.</p>
+
+        <p>Most equipment exists comfortably in the real world, until it doesn’t. Some items behave differently when exposed to The Veil or Nodes within cosmOS.</p>
+
+        <h2>Inventory</h2>
+        <p>Inventory represents what a character can reasonably access in the moment. This includes worn gear, items kept on hand, and tools stored within a container. Each player is expected to maintain and use their own inventories.</p>
+
+        <p> Each item stored into the inventory can be defined as Small, Medium or Large.</P>
+
+        <h3>Item Sizes</h3>
+        <ul>
+        <li><strong>Small Items:</strong> Are considered negligible and an unlimited number can be kept.</li><br>
+        <li><strong>Medium Items:</strong> Are items that take a toll to carry. The number of Medium Items in your inventory cannot exceed your Carrying Capacity.</li><br>
+        <li><strong>Large Items:</strong> Each player can only carry one Large Item at a time, and doing so results in 3 Error Die added to every action.</li>
+      </ul>
+
+        <h3>Carrying Capacity</h3>
+        <p>Carrying capacity reflects physical limits of what can be naturally held.</p>
+
+        <p>The Carrying Capacity stat is defined from your Physique score, but can be modified with other abilities.</p>
+
+        <h3>Item Types</h3>
+        <p>There are two main categories:</p>
+
+        <p><strong>Standard Items:</strong> Standard Items are mundane and designed for general use by everyone.</p>
+
+        <p><strong>Advanced Items:</strong> Advanced Items assume training, calibration, or procedural knowledge. You may be able to use them untrained, but you won’t unlock their full potential, and there will be major draw-back.</p>
+
+        <h2>Equipables</h2>
+        <p>There are a few categories of items that might be actively used to help a player on their goals. These items must be Equipped, meaning that they are either directly in the hands of user, or immediately on their person, such as glasses, gloves, or a necklace.</p>
+
+        <p>You cannot equip more items actively than your body allows. This also means you cannot actively equip two of the same type of item, unless stated otherwise This means only one suit of armor, one pair of shoes, but also means that you can only wear one magic ring or something similar at a time. </p>
+
+        <h3>Armor</h3>
+        Any piece of equipment that increases one of the Defense stats directly is considered Armor. Armor has an associated Defense which is added to the players Defense. You may equip multiple pieces of armor at the same time, but your Defense is only affected by the item with the highest Defense score for each Defense Stat, unless stated otherwise, meaning you cannot stack effects.
+
+        <h3>Charms</h3>
+        Charms are items that provide minor benefits to the wearer while equipped. Charms can be equipped in addition to other items, and can be stacked freely unlike Armor.
+
+        <h3>Weapons</h3>
+        <p>Weapons are tools designed to injure others, whether physical, or digital. Not all weapons look like weapons, and not all of them function reliably across environments. Weapons have a <strong>Primary Stat</strong>meaning that you must use that given Stat to wield the weapon as part of your attack.</p>
+        <p><strong>Versatile</strong>Versatile Weapons have a special quality that allows them to be used with Physique and Precision.</p>
+        <p><strong>Charge</strong>Charge Weapons or abilities are considered cumbersome and difficult to multi-task with. You cannot Move on your turn as a Free Action the same turn you use a Charge weapon.</p>
+         <p><strong>Reload</strong>Weapons that require reloading de-activate themselves after each use, and require a Minor Action to re-activate.</p>
+        <p><strong>Reach</strong> The weapons range includes an extra space away than usual.</p>
+        <p><strong>Mod Slots</strong>Some weapons have Mod Slots, which allow them to be modified with specific Mods to alter their properties.</p>
+        <p><strong>Throwable</strong>Some weapons can be used temporarily as a ranged weapon. Throwable weapons can be used once as a Short Ranged attack, and after which they need to retrieve the weapon.</p>
+
+        <h2>Other Items</h2>
+
+        <h3>Mods</h3>
+        <p>Modifications or Mods, are specific items used to modularly slot into base items to alter or improve the base items abilities. The mod will state its requirements on the type of item.</p>
+        <p>Each item capable of being modded will have a Mod Slot amount, which is the maximum number of mods it can have. By default, this is zero.</p>
+
+        <h3>Tokens</h3>
+        <p>Tokens are defined as any items that either only work within the cosmOS or only have some feature when under the effects of its influence.</p>
+
+
+        <div class="distros" aria-label="Other Rules">
+                <a class="panel distro" id="panels" href="../panels/items.html" aria-label="combat">
+        <h2> Equipment List</h2></a>
+        </div>
+
+
+
+
+
+        <!-- Your page content here -->
+
+
+        <nav class="page-nav">
+            <a class="prev page-nav-prev" href="../rules/distros.html">Go to Character Distribution</a>
+            <a class="next page-nav-next" href="../panels/items.html">Go to Armory</a>
+        </nav>
+  
+          
+      </section>
+  </main>
+
+  <footer>
+    VIRUS.ZONE © Virtual Veil Project
+  </footer>
+</body>
+    <script src="toc.js"></script>
+    <script src="../scripts/go-back.js"></script>
+  <script>
+    // Programmatic example: place the 'Go back to Rules' button under the TOC
+    if (window.injectGoBack) {
+      window.injectGoBack({ href: '../rules.html', label: 'Rules', placement: 'outside', tocSelector: '#toc-container' });
+    }
+  </script>
+</html>

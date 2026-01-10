@@ -3,54 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="../src/favicon.png" />
   <link rel="stylesheet" href="../styles.css">
-  <title>VIRUS.ZONE — Items</title>
+  <title>VIRUS.ZONE — Page Title</title>
+  <link rel="icon" type="image/x-icon" href="../src/favicon.png">
 </head>
 <body>
-  <div class="scanlines"></div>
-  <header>
-    <div class="logo">VIRUS.ZONE</div>
-    <nav>
-      <a href="../index.html">Home</a>
-      <a href="../rules.html">Rules</a>
-      <a href="overview.html">Panels</a>
-    </nav>
-  </header>
+  <div id="header-container"></div>
+  <script src="../load-header.js"></script>
+  <script src="../auto-toc.js"></script>
+  <script src="../scripts/comps-render.js"></script>
+
 
   <main class="container">
+
     <section class="hero">
-      <h1>Monsters & Items</h1>
-      <p>Quick-stat blocks and sample loot to speed play.</p>
+        <h1>Armory</h1>
+        <p>This is a true treasure trove.</p>
     </section>
 
-    <section class="content">
-      <h2>Example Creature</h2>
-      <pre>Name: Glitched Warden
-HP: 18 | Armor: 2 | Attack: +4 (1d8+2)
-Traits: Corrupted, Alarmed</pre>
+      <section class="content">
 
-      <h2>Sample Items</h2>
-      <ul>
-        <li><strong>Pulse Blade</strong> — Melee, +2 damage, ignores 1 Armor.</li>
-        <li><strong>EMP Grenade</strong> — Area disable COMPs for 1 round (save vs Will).</li>
-        <li><strong>Memory Shard</strong> — Grants a temporary talent when installed in a COMP.</li>
-      </ul>
+        <h2>Item List</h2>
+        <p>Following is list of some sample items, that can be integrated into any setting or campaign within Virus.Zone. Please feel free to use these as a baseline or alter their properties as you see fit.</p>
 
-      <h2>Loot Table (simple)</h2>
-      <ol>
-        <li>Common scrap / credits</li>
-        <li>Minor tech / consumable</li>
-        <li>Rare COMP module or unique gear</li>
-      </ol>
 
-      <h2>Notes</h2>
-      <p>Stat blocks should be short and use the Core Mechanics panel for resolution references.</p>
-    </section>
+          <h3>Weapons</h3>
+
+          <h4>Basic Melee Weapons</h4>
+
+          <div class="chip-card" aria-label="Weapon Items">
+            <h4>Baseball Bat</h4>
+            <span class="weapon-info"><span class="weapon-attr">Close Range</span><span class="weapon-attr">Standard Equip</span><span class="weapon-attr">Medium Size</span><span class="weapon-attr">Physique</span></span>
+            <p>Number #1 Little Slugger.</p>
+          </div>
+
+          <div class="chip-card" aria-label="Weapon Items">
+            <h4>Sword <strong>Power 1</strong></h4>
+            <span class="weapon-info"><span class="weapon-attr">Close Range</span><span class="weapon-attr">Advanced Equip</span><span class="weapon-attr">Medium Size</span><span class="weapon-attr">Physique</span></span>
+            <p>A melee weapon designed for slashing or thrusting. Commonly used in close combat situations.</p>
+          </div>
+
+          <div class="chip-card" aria-label="Weapon Items">
+            <h4>Tactical Knife <strong>Throwable</strong> </h4>
+            <span class="weapon-info"><span class="weapon-attr">Close Range</span><span class="weapon-attr">Standard Equip</span><span class="weapon-attr">Small</span><span class="weapon-attr">Versatile</span></span>
+            <p>A quick and easy to use tactical weapon.</p>
+          </div>
+
+          <div class="chip-card" aria-label="Weapon Items">
+            <h4>Light Sword<strong>Power 2</strong> <strong>2 Mod Slots</strong> <strong>Charge</strong></h4>
+            <span class="weapon-info"><span class="weapon-attr">Close Range</span><span class="weapon-attr">Advanced Equip</span><span class="weapon-attr">Medium Size</span><span class="weapon-attr">Versatile</span></span>
+            <p>Bestowed upon chosen Knights, this Energy Beam weapon has unyielding power.</p>
+          </div>
+
+          <h4>Basic Ranged Weapons</h4>
+          
+          <div class="chip-card" aria-label="Weapon Items">
+            <h4>Pistol <strong>Long Range</strong> 
+            <strong>1 Mod Slot</strong> <strong>Reload</strong></h4>
+            <span class="weapon-info"><span class="weapon-attr">Short Range</span><span class="weapon-attr">Advanced Equip</span><span class="weapon-attr">Small</span><span class="weapon-attr">Precision</span></span>
+            <p>A melee weapon designed for slashing or thrusting. Commonly used in close combat situations.</p>
+          </div>
+
+          <div class="chip-card" aria-label="Weapon Items">
+            <h4>Rifle
+            <strong>1 Mod Slot</strong> <strong>Reload</strong>
+            <strong>Charge</strong><strong>Power 1</strong></h4>
+            <span class="weapon-info"><span class="weapon-attr">Long Range</span><span class="weapon-attr">Advanced Equip</span><span class="weapon-attr">Medium Size</span><span class="weapon-attr">Precision</span></span>
+            <p>A melee weapon designed for slashing or thrusting. Commonly used in close combat situations.</p>
+          </div>
+
+
+
+              <nav class="page-nav">
+                <a class="prev page-nav-prev" href="../rules/equipment.html">Go to Equipment Rules</a>
+                <a class="next page-nav-next" href="../rules/programs.html">Go to Programs</a>
+              </nav>
+  
+          
+      </section>
   </main>
 
   <footer>
-    VIRUS.ZONE @ Virtual Veil Project
+    VIRUS.ZONE © Virtual Veil Project
   </footer>
 </body>
+    <script src="toc.js"></script>
+    <script src="../scripts/go-back.js"></script>
+  <script>
+    // Programmatic example: place the 'Go back to Rules' button under the TOC
+    if (window.injectGoBack) {
+      window.injectGoBack({ href: 'index.html', label: 'Home', placement: 'outside', tocSelector: '#toc-container' });
+    }
+  </script>
 </html>

@@ -17,10 +17,10 @@
     },
     {
       "name": "Antiqua Tablet — Old World Model T-1",
-      "description": "A wizard's tome disguised as a tablet computer. Its archaic OS is a haven for dormant spirits.",
+      "description": "A wizard's tome disguised as a tablet computer. Its a haven for dormant spirits.",
       "chipCapacity": 4,
       "threadCount": 2,
-      "cacheSize": 3,
+      "cacheSize": 0,
       "batteryLife": "12 hours"
     },
     {

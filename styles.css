@@ -214,19 +214,47 @@
       color: var(--error-magenta);
       font-size: 18px;
       margin-bottom: 8px;
-
     }
 
     h4{
-      color: var(--error-magenta);
-      font-size: 18px;
-      margin-bottom: 8px;
+      color: var(--glitch-cyan-lite);
+      font-size: 16px;
+      margin-bottom: 6px;
+      font-weight: 600;
     }
 
     .panel p {
       color: var(--crt-white);
       font-size: 14px;
     }
+
+/* Leading <strong> labels: small rounded badge to emphasize categories across pages 🔖 */
+/* Applies to paragraphs that begin with a <strong> (e.g., "<p><strong>Agility:</strong> ...</p>") */
+strong {
+  display: inline-block; /* keeps it inline with text */
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #0C0F12, #0E1113);
+  color: var(--toxic-cyan);
+  border: 2px solid rgba(255,255,255,0.04);
+  border-left: 6px solid rgba(0,240,208,0.06);
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+/* Hover/focus accessibility */
+strong:hover, p > strong:focus {
+  border-color: rgba(238,0,58,0.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5), 0 0 18px rgba(0,240,208,0.06);
+}
+
+/* Slightly smaller badge on narrow screens */
+@media (max-width: 600px) {
+  strong:first-child { padding: 5px 8px; font-size: 12px; border-radius: 6px; }
+}
 
     /* Distro buttons — reuse panel behavior but full-width and slightly different accents */
     .distros {
@@ -443,6 +471,35 @@
 /* Keep the default (inside-TOC) styles intact: they are block-level and fit the TOC column */
 .toc-container .toc-go-back { display:block; }
 
+/* Page-level previous/next navigation — boxy, larger, animated */
+.page-nav { display:flex; gap:18px; align-items:stretch; margin-top:28px; }
+.page-nav a { flex: 1 1 48%; display:flex; align-items:center; justify-content:center; padding:28px 22px; border-radius:6px; text-decoration:none; color: var(--toxic-cyan); background-image: radial-gradient(closest-side at 10% 20%, rgba(0,240,208,0.04), transparent 12%), linear-gradient(180deg, #0B0D0E, #0E1113); background-repeat: no-repeat, repeat; background-position: 10% 20%, 0 0; background-size: 40% 60%, cover; border: 3px solid rgba(255,255,255,0.04); font-weight:800; font-size:16px; letter-spacing:0.6px; text-transform:uppercase; transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms, border-color 220ms, background-size 260ms ease; position:relative; overflow:hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.45); }
+.page-nav a:focus { outline: 2px solid rgba(0,240,208,0.14); outline-offset: 3px; }
+
+/* Prev/Next accents and layout */
+.page-nav a.prev { justify-content:flex-start; padding-left:28px; border-left-width:8px; border-left-style:solid; border-left-color: rgba(0,240,208,0.08); }
+.page-nav a.next { justify-content:flex-end; padding-right:28px; border-right-width:8px; border-right-style:solid; border-right-color: rgba(238,0,58,0.04); }
+
+/* Inline arrows tied to text so they move together */
+.page-nav a.prev::before { content: '◀'; display:inline-block; margin-right:12px; font-size:18px; transform: translateX(0); transition: transform 160ms ease; vertical-align:middle; color: currentColor; }
+.page-nav a.next::after { content: '▶'; display:inline-block; margin-left:12px; font-size:18px; transform: translateX(0); transition: transform 160ms ease; vertical-align:middle; color: currentColor; }
+
+/* Hover: simple lift + cyber glow */
+.page-nav a:hover, .page-nav a:focus { transform: translateY(-6px); transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms, background 220ms, border-color 220ms; box-shadow: 0 30px 60px rgba(0,0,0,0.6); color: var(--virus-red); background-image: radial-gradient(closest-side at 10% 20%, rgba(0,240,208,0.06), transparent 18%), linear-gradient(180deg, #0E1113, #121416); background-size: 60% 80%, cover; }
+.page-nav a.prev:hover, .page-nav a.prev:focus { box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 28px rgba(0,240,208,0.12); border-color: rgba(0,240,208,0.12); }
+.page-nav a.next:hover, .page-nav a.next:focus { box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 28px rgba(238,0,58,0.10); border-color: rgba(238,0,58,0.06); }
+.page-nav a:hover::before, .page-nav a:focus::before { /* noop kept for compatibility */ }
+
+/* Arrow nudge on hover for subtle motion */
+.page-nav a.prev:hover::before { transform: translateX(-4px); }
+.page-nav a.next:hover::after { transform: translateX(4px); }
+
+/* Stacked / full-width on small screens */
+@media (max-width: 900px) {
+  .page-nav { flex-direction: column; align-items:stretch; gap:12px; }
+  .page-nav a { flex: 1 1 auto; width:100%; padding:20px 18px; text-align:center; }
+}
+
 
 /* Responsive: hide TOC on small screens and show a small toggle */
 @media (max-width: 900px) {
@@ -497,10 +554,10 @@
     margin-left: 8px;
     vertical-align: middle;
   }
-  .chip-card h4 { margin:0 0 6px 0; color:var(--virus-red); font-size:15px; display:flex; align-items:center; gap:8px; }
+  .chip-card h4 { margin:0 0 6px 0; color:var(--virus-red); font-size:15px; display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
   .chip-card .chip-badge { font-size:11px; padding:3px 6px; }
-  .chip-card .chip-type { color:var(--glitch-cyan-lite); font-size:12px; margin-bottom:6px; }
-  .chip-card .chip-desc { color:var(--crt-white); margin:0; }
+  .chip-card .chip-type { color:var(--glitch-cyan-lite); font-size:12px; margin-bottom:6px; }  .chip-card .weapon-info { display:flex; flex-wrap:wrap; gap:6px 8px; margin-bottom:6px; }
+  .chip-card .weapon-info .weapon-attr { background: linear-gradient(180deg, #0C0F12, #0E1113); color:var(--glitch-cyan-lite); font-size:12px; padding:4px 8px; border-radius:6px; border:1px solid rgba(255,255,255,0.02); white-space:nowrap; font-weight:700; }  .chip-card .chip-desc { color:var(--crt-white); margin:0; }
 
   /* Optional smaller, popover style (use data-mode="popover") */
   .chip-card.popover {
