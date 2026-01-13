@@ -40,7 +40,7 @@
         <!-- Page navigation: previous/next links -->
                  <nav class="page-nav">
       <a class="prev page-nav-prev" href="cosmOS.html">Go to cosmOS</a>
-      <a class="next page-nav-next" href="factions.html">Go to Factions</a>
+      <a class="next page-nav-next" href="locations.html">Go to Locations</a>
     </nav>
           
       </section>
@@ -50,4 +50,12 @@
     VIRUS.ZONE © Virtual Veil Project
   </footer>
 </body>
+    <script src="../scripts/go-back.js"></script>
+  <script>
+    // Programmatic example: place the 'Go back to Rules' button under the TOC
+    if (window.injectGoBack) {
+      window.injectGoBack({ href: '../lore.html', label: 'Lore', placement: 'outside', tocSelector: '#toc-container' });
+    }
+  </script>
+
 </html>
