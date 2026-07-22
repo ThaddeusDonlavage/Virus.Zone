@@ -1293,7 +1293,7 @@
     "tier": "Uncommon",
     "type": "Debuff",
     "tags": ["Engineering", "Status"],
-    "description": "You again a Special Minor Action. You can touch a willing entity, the next an another entity targets the willing target, they suffer the Shocked status effect immediately. This wears off at the start of your next turn.",
+    "description": "You again a Special Minor Action. You can touch a willing entity, the next time an another entity targets the that target, they suffer the Shocked status effect immediately. This wears off at the start of your next turn.",
     "flavor": "The hardware is good, it should be able to run anything."
 },
 {

@@ -3,37 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="/src/favicon.png" />
-  <link rel="stylesheet" href="styles.css">
-  <title>VIRUS.ZONE — Character Builder</title>
+  <link rel="stylesheet" href="../styles.css">
+  <title>VIRUS.ZONE — Character Creation</title>
+  <link rel="icon" type="image/x-icon" href="../src/favicon.png">
 </head>
 <body>
-  <div class="scanlines"></div>
-
-  <script src="auto-toc.js"></script>
-
-  <header>
-    <div class="logo">VIRUS.ZONE</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="lore.html">Lore</a>
-      <a href="rules.html">Rules</a>
-      <a href="builder.html">Character Builder</a>
-    </nav>
-  </header>
+  <div id="header-container"></div>
+  <script src="../load-header.js"></script>
+  <script src="../auto-toc.js"></script>
+  <script src="../scripts/comps-render.js"></script>
 
   <main class="container">
+
     <section class="hero">
-      <h1>Character Builder</h1>
-      <p>A quick step-by-step creation flow for players to build COMP users.</p>
+        <h1>Character Creation</h1>
+        <p>Two steps forward and one steps back.</p>
     </section>
 
-    TODO: Create Character Builder
+      <section class="content">
 
+        <h2 id="overview">Overview</h2>
+        <p>Creating a character for Virtual Veil is a collaborative process between you and your Compiler.</p>
+
+        <h3 id="quick-reference">Quick Reference Checklist</h2>
+        <table class="stats-table" style="width: 100%;">
+          <tbody>
+            <tr><td>Concept & Backstory</td><td>What are you trying to play?</td></tr>
+            <tr><td>Choose Distribution</td><td>What playstyle best fits you?</td></tr>
+            <tr><td>Choose your Contract</td><td>Who is your character as a person?</td></tr>
+            <tr><td>Build Your COMP</td><td>Hardware, and Chip configuration.</td></tr>
+            <tr><td>Allocate Attributes</td><td>Distribute Skills and Stat points</td></tr>
+            <tr><td>Choose Equipment</td><td>Weapons, armor, tools, and gear</td></tr>
+            <tr><td>Establish Relationships</td><td>Connections to NPCs and other players</td></tr>
+          </tbody>
+        </table>
+
+
+        <h2 id="step-one">Concept</h2>
+        <p>Before begining play its good to establish who your character is. Consider these questions:</p>
+        <ul>
+          <li><strong>Who were you before?</strong> What was your life like in the mundane world?</li>
+          <li><strong>What drew you to the Veil?</strong> What event or discovery made you aware of this hidden reality?</li>
+          <li><strong>What are your goals?</strong> Do you seek power, knowledge, vengeance, or redemption?</li>
+          <li><strong>What is your relationship with society?</strong> Are you a rebel, loyal to a cause, or something in between?</li>
+        </ul>
+        <p>Your answers here will inform choices later on. Work with your Compiler to ensure your character fits within the campaign world and complements your fellow players' concepts.</p>
+
+        <h2 id="step-two">Distribution</h2>
+        <p>Your <strong>distribution</strong> represents the philosophy and methodology through which you invoke power. Each distribution grants unique abilities and shapes how you interact with the world.</p>
+
+              <a class="panel distro" id="panels" href="rules/distros.html" aria-label="distro">
+        <h3> OS Distributions (Character Classes) </h3></a>
+
+        <h2 id="step-three">Backgrounds</h2>
+        <p>Your <strong>background</strong> represents your expertise and history before forging a contract with a COMP. It grants you specific skills and mechanical bonuses.</p>
+
+        <a class="panel distro" id="panels" href="builder/backgrounds.html" aria-label="distro">
+        <h3> Backgrounds </h3></a>
+
+        <h2>Contracts</h2>
+        <p>Your <strong>Contract</strong> represents thye inciting incident and desires that caused you to activate a COMP and let it into your soul. Contracts are thematic and often come with specific powers and abilities</p>
+
+        <a class="panel distro" id="panels" href="builder/contracts.html" aria-label="distro">
+        <h3> Contracts</h3></a>
+
+        <h2 id="step-four">Your COMP</h2>
+        <p>Your <strong>COMP</strong> is the device through which you interface with the Veil. It is equal parts computer and consciousness, requiring careful configuration. When selecting your starting COMP, be sure that it will be easy to access and use within the scale of the campaign.</p>
+
+        <a class="panel distro" id="panels" href="rules/comps.html" aria-label="distro">
+        <h3>COMPs</h3></a>
+
+        <h2 id="step-six">Select Chips</h2>
+        <p><strong>Chips</strong> are specialized software modules that grant your character specific abilities and powers. Each chip represents a particular skill or supernatural capability accessed through your COMP's processing power.</p>
+
+        <p>Chip selection is limited by your attribute levels and available processing capacity on your COMP. Select chips that complement your character concept and desired playstyle.</p>
+
+        <a class="panel distro" id="panels" href="rules/chips.html" aria-label="distro">
+        <h3>Chips</h3></a>
+
+        <h2 id="step-five">Step 5: Allocate Attribute Points</h2>
+        <p>You have a pool of points to distribute among your character's core attributes. These represent your innate capabilities and determine the size of your dice pools for various actions.</p>
+
+        <p>Most characters start with 5 points to distribute. Your distribution may provide bonuses or restrictions on specific attributes. Attributes typically range from 1-5 during character creation, with 3 being average for a trained professional.</p>
+
+
+
+        <h2 id="step-seven">Choose Equipment</h2>
+        <p>Beyond your COMP, equip yourself with physical gear that supports your operations. This might include:</p>
+        <ul>
+          <li>Weapons for direct combat situations</li>
+          <li>Protective gear and armor</li>
+          <li>Hacking hardware and adapters</li>
+          <li>Communication and surveillance devices</li>
+          <li>Tools and specialized equipment for your background</li>
+        </ul>
+
+        <p>Equipment may have weight or encumbrance restrictions. Work with your Compiler to ensure your loadout is appropriate for your campaign.</p>
+
+        <a class="panel distro" id="panels" href="rules/equipment.html" aria-label="distro">
+        <h3>Equipment</h3></a>
+
+
+        <h2 id="step-eight">Establish Relationships</h2>
+        <p>Work with the Compiler and other players to establish connections between characters and NPCs:</p>
+        <ul>
+          <li><strong>Contacts</strong> - NPCs who can provide information, resources, or support.</li>
+          <li><strong>Rivals</strong> - Others who oppose or compete with your character.</li>
+          <li><strong>Bonds</strong> - Deep connections to other player characters or significant NPCs.</li>
+          <li><strong>Obligations</strong> - Debts, favors, or commitments that drive your character's motivations.</li>
+        </ul>
+
+        <p>These connections create narrative hooks and provide the Compiler with ways to involve your character in the story.</p>
+
+        <h2 id="step-ten">Final Review</h2>
+        <p>Double-check your character sheet with your Compiler:</p>
+        <ul>
+          <li>All attributes are properly allocated</li>
+          <li>Your chips are valid selections</li>
+          <li>Equipment weight is within limits</li>
+          <li>Relationships and character hooks are established</li>
+          <li>You understand your special abilities</li>
+        </ul>
+
+        <p>Once approved, your character is ready to enter the Veil and begin their story.</p>
+
+        <nav class="page-nav">
+          <a class="prev page-nav-prev" href="distros.html">OS Distributions</a>
+          <a class="next page-nav-next" href="chips.html">Chip Rules</a>
+        </nav>
+  
+      </section>
   </main>
 
   <footer>
     VIRUS.ZONE © Virtual Veil Project
   </footer>
+  <script src="../scripts/go-back.js"></script>
+  <script>
+    if (window.injectGoBack) {
+      window.injectGoBack({ href: '../rules.html', label: 'Rules', placement: 'outside', tocSelector: '#toc-container' });
+    }
+  </script>
 </body>
 </html>
