@@ -91,6 +91,9 @@
       <h3 id="register">Register</h3>
       <p>The register is the pool of dice that are actively rolled to resolve actions. The most random and violate of stats, the register is in reference to all current dice rolled for a specific purpose, which only will last for the current round. There are several things that can happen to the register while it is still in play. Remember, you keep your dice in the data cache as long as your comp is still running, you discard all dice in your register unless told otherwise. Moving dice from the register to the cache is called <strong>loading</strong>.</p>
 
+      <h3 id="Web">Web</h3>
+      <p>Sometimes, such as under the effects of Scripts from cosmOS, connectivity becomes much more possible. Web dice and abilities can be shared simultaneously each turn between enemies and allies alike. A digit used in an action part of the web, is used only by that entity, all other affected entities treat the Web pool as their own. Adding Web dice to the scene or using web dice are referred to as <strong>Uploading</strong>and <strong>Downloading</strong> respectively.</p>
+
       <h2 id="adding-subtracting">Adding Or Subtracting</h2>
       <p>Sometimes for the purposes of comparing rolls or using modifiers, the individual number on the die matters, not just that they are pairs. You can convert each roll made into a numerical value by using the number of matching pairs as the tens digit and the actual face number as the ones digit. For example, three sevens would be represented as <strong>37</strong>. Adding or subtracting rolls can potentially turn a failure into a success, since an individual die could theoretically be turned into a pair or vice-versa.</p>
 
@@ -242,12 +245,14 @@
       <h3>Faults & Errors</h3>
       <p>Faults represent the toll of lasting damage from combat.</p>
       
-      <p>Each time you take damage to Confidence, Cyber or Vitality you must add a Fault Die to your cache. Fault Die have a special property in that they cannot be used for actions, and any pairs of matching Fault die result in a Injury, at which point the dice are removed. Consult the Injury Severity list for the results going forward until the Injury can be healed.</p>
+      <p>Each time you take damage to <b>Confidence, Cyber or Vitality</b> you must add a Fault Die to your cache. Fault Die have a special property in that they cannot be used for actions, and any pairs of matching Fault die result in a Injury, at which point the dice are removed. Consult the Injury Severity list for the results going forward until the Injury can be healed.</p>
 
       <p>Fault Dice are all removed once combat ends the entity goes to a stable location.</p>
 
+      <p>Error Die, rely on the same mechanics as Fault Die, in that they cancel out other rolls, but do not cause Injuries.</p>
+
        <p><strong>Other Entity Damage Methods:</strong></p>
-       <p>In many instances, especially for weaker enemies, its recommended to skip the Fault Roll system for taking damage, and instead directly subtracting out the Vitality of the entity. Some of the generic Sprites built in the world to explicitly be mobs, may only have a unique stat called Health that is universally targetted with all attacks.</p>
+       <p>In many instances, especially for weak enemies, its recommended to skip the Fault Roll system for taking damage, and instead directly subtracting out the Vitality of the entity. Some of the generic Sprites built in the world to explicitly be mobs, may only have a unique stat called Health that is universally targetted with all attacks.</p>
 
       <ul>
         <li><strong>Minor Injury (dub):</strong> 1 Error Die rolled for each action</li>
