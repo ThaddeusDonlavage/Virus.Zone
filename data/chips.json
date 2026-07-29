@@ -465,7 +465,7 @@
     "source": "Hatter",
     "tier": "Rare",
     "type": "Control",
-    "tags": ["Ingenuity"],
+    "tags": ["Ingenuity", "Luck"],
     "description": "A ranged attack with a range of 4 spaces. If this attack deals damage with your lucky numbers, the target is stunned for the next round.",
     "flavor": "A sudden jolt that scrambles the senses."
   },
@@ -1335,6 +1335,66 @@
     "tags": ["Precision", "Movement"],
     "description": "You can expend one cache die while using a Precision attack to move to a space beside the target.",
     "flavor": "Too much data makes it easy to break in."
+},
+{
+  "id": 1142,
+  "name": "Speed Stream",
+  "source": "Hatter",
+  "tier": "Common",
+  "type": "Utility",
+  "tags": ["Cyber", "Ingenuity"],
+  "description": "Minor Action: Ignore one instance of cover, difficult terrain, or line-of-sight blockage until the start of your next turn.",
+  "flavor": "The world bends around your will."
+},
+{
+  "id": 1143,
+  "name": "Re-Direct",
+  "source": "Hatter",
+  "tier": "Rare",
+  "type": "Defense",
+  "tags": ["Cyber", "Wit"],
+  "description": "Reaction: When an enemy targets you with a ranged action, using a cache die as a part of this Action, redirect that action to a nearby target of your choice. If no valid target exists, you gain 1 Fault die.",
+  "flavor": "I was never really there."
+},
+{
+  "id": 1144,
+  "name": "No Clip",
+  "source": "Hatter",
+  "tier": "Rare",
+  "type": "Defense",
+  "tags": ["Movement"],
+  "description": "Using at least one cache Die as part of an Action, you may safely shift through any one wall, door, floor or ceiling you can normally reach as if it wasn't there.",
+  "flavor": "They forgot to patch that problem out of the system."
+},
+{
+  "id": 1145,
+  "name": "Ping",
+  "source": "Hatter",
+  "tier": "Uncommon",
+  "type": "Utility",
+  "tags": ["Cyber", "Wit"],
+  "description": "As a minor action, you learn the exact location of any entity in your immediate action.",
+  "flavor": "Hello World. I've found you."
+},
+{
+  "id": 1146,
+  "name": "Recursion",
+  "source": "Hatter",
+  "tier": "Rare",
+  "type": "Buff",
+  "tags": ["Cyber", "Combo"],
+  "description": "Using your cache as a minor action, you can repeat that action a second time, with a -1 debuff.",
+  "flavor": "Some events refuse to stay put."
+},
+{
+  "id": 1147,
+  "name": "RNG",
+  "source": "Hatter",
+  "tier": "Rare",
+  "type": "Buff",
+  "tags": ["Luck"],
+  "description": "Select a digit, it becomes your Lucky number. Add one Lucky die from your register if you used it as a part of an Action.",
+  "flavor": "Some events refuse to stay put."
 }
 
 ]

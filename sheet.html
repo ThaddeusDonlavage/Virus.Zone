@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/src/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>VIRUS.ZONE — Character Sheet</title>
+</head>
+<body>
+  <header>
+    
+    <div class="logo">VIRUS.ZONE</div>
+    <p class="sheet-footnote">Autosaves locally in browser.</p>
+    <nav>
+        
+      <a href="index.html">Home</a>
+      <a href="lore.html">Lore</a>
+      <a href="rules.html">Rules</a>
+      <a href="builder.html">Character Builder</a>
+      <a href="sheet.html">Character Sheet</a>
+    </nav>
+  </header>
+
+  <aside class="sheet-sidebar" aria-label="Terminal status panel">
+    <div class="sheet-sidebar-block">
+      <p class="sheet-sidebar-label">[ SYS ]</p>
+      <h4>Access Node</h4>
+      <p>Character data is saved locally in this browser session.</p>
+    </div>
+    <div class="sheet-sidebar-block">
+      <p class="sheet-sidebar-label">[ NOTE ]</p>
+      <h4>Quick Hooks</h4>
+      <p>Use this space for contacts, objectives, current infections, and scene tags.</p>
+    </div>
+  </aside>
+
+  <main class="container">
+    <section class="content">
+      <div class="sheet-toolbar">
+
+        <button id="sheet-reset" class="sheet-button secondary" type="button">Clear Sheet</button>
+      </div>
+
+      <form id="character-sheet" class="sheet-grid">
+        <section class="sheet-card sheet-card-equal">
+          <h2>Identity</h2>
+          <div class="sheet-inline">
+            <label>
+              Character Name
+              <input id="characterName" name="characterName" type="text" placeholder="Alias / handle" />
+            </label>
+            <label>
+              Player
+              <input id="playerName" name="playerName" type="text" placeholder="Compiler or player" />
+            </label>
+          </div>
+          <label>
+            Concept
+            <input id="concept" name="concept" type="text" placeholder="Who are you in the Veil?" />
+          </label>
+          <label>
+            Distribution
+            <input id="distribution" name="distribution" type="text" placeholder="Anonymous / Hatter / etc." />
+          </label>
+          <label>
+            Backstory
+            <textarea id="backstory" name="backstory" placeholder="A short summary of your current path."></textarea>
+          </label>
+        </section>
+
+        <section class="sheet-card">
+          <h2>Core Stats</h2>
+          <div class="sheet-stats-grid">
+            <label class="sheet-stat"><span>Agility</span><input id="agility" name="agility" type="text" inputmode="numeric" placeholder="0" /></label>
+            <label class="sheet-stat"><span>Physique</span><input id="physique" name="physique" type="text" inputmode="numeric" placeholder="0" /></label>
+            <label class="sheet-stat"><span>Precision</span><input id="precision" name="precision" type="text" inputmode="numeric" placeholder="0" /></label>
+            <label class="sheet-stat"><span>Vitality</span><input id="vitality" name="vitality" type="text" inputmode="numeric" placeholder="0" /></label>
+            <label class="sheet-stat"><span>Cyber</span><input id="cyber" name="cyber" type="text" inputmode="numeric" placeholder="0" /></label>
+            <label class="sheet-stat"><span>Engineering</span><input id="engineering" name="engineering" type="text" inputmode="numeric" placeholder="0" /></label>
+            <label class="sheet-stat"><span>Ingenuity</span><input id="ingenuity" name="ingenuity" type="text" inputmode="numeric" placeholder="0" /></label>
+            <label class="sheet-stat"><span>Wit</span><input id="wit" name="wit" type="text" inputmode="numeric" placeholder="0" /></label>
+            <label class="sheet-stat"><span>Charisma</span><input id="charisma" name="charisma" type="text" inputmode="numeric" placeholder="0" /></label>
+            <label class="sheet-stat"><span>Confidence</span><input id="confidence" name="confidence" type="text" inputmode="numeric" placeholder="0" /></label>
+            <label class="sheet-stat"><span>Performance</span><input id="performance" name="performance" type="text" inputmode="numeric" placeholder="0" /></label>
+            <label class="sheet-stat"><span>Stealth</span><input id="stealth" name="stealth" type="text" inputmode="numeric" placeholder="0" /></label>
+          </div>
+
+          <div class="sheet-subsection">
+            <h3>Defenses & Wounds</h3>
+            <div class="sheet-stats-grid sheet-stats-grid-compact">
+              <label class="sheet-stat"><span>Defense</span><input id="defense" name="defense" type="text" inputmode="numeric" placeholder="0" /></label>
+              <label class="sheet-stat"><span>Integrity</span><input id="integrity" name="integrity" type="text" inputmode="numeric" placeholder="0" /></label>
+              <label class="sheet-stat"><span>Resolve</span><input id="resolve" name="resolve" type="text" inputmode="numeric" placeholder="0" /></label>
+              <label class="sheet-stat"><span>Wounds</span><input id="wounds" name="wounds" type="text" inputmode="numeric" placeholder="0" /></label>
+            </div>
+          </div>
+        </section>
+
+        <section class="sheet-card sheet-card-equal">
+          <h2>COMP Track</h2>
+          <div class="sheet-inline">
+            <label>
+              Processing Power
+              <input id="processingPower" name="processingPower" type="text" inputmode="numeric" placeholder="0" />
+            </label>
+            <label>
+              Thread Count
+              <input id="threadCount" name="threadCount" type="text" inputmode="numeric" placeholder="0" />
+            </label>
+          </div>
+          <div class="sheet-inline">
+            <label>
+              Cache Size
+              <input id="cacheSize" name="cacheSize" type="text" inputmode="numeric" placeholder="0" />
+            </label>
+            <label>
+              Battery Life
+              <input id="batteryLife" name="batteryLife" type="text" inputmode="numeric" placeholder="0" />
+            </label>
+          </div>
+          <label>
+            Current Chips
+            <textarea id="chips" name="chips" placeholder="Homing Attack: bypasses cover.&#10;Echo: redirects effects.&#10;#TODO Add Direct Link to the Chip Database"></textarea>
+          </label>
+          <label>
+            Equipment
+            <textarea id="equipment" name="equipment" type="text" placeholder="Pistol, toolkit, cable spool" ></textarea>
+          </label>
+        </section>
+
+        <section class="sheet-card sheet-card-wide">
+          <h2>Session Notes</h2>
+          <label>
+            Write your own notes
+            <textarea id="notes" name="notes" placeholder="Use this space for scene hooks, contacts, conditions, objectives, and personal reminders."></textarea>
+          </label>
+          <p id="sheet-status" class="sheet-footnote" aria-live="polite">Waiting for your first edit.</p>
+        </section>
+      </form>
+
+      <nav class="page-nav">
+        <a class="prev page-nav-prev" href="builder.html">Go to Character Builder</a>
+        <a class="next page-nav-next" href="rules.html">Go to Rules</a>
+      </nav>
+    </section>
+  </main>
+
+  <footer>VIRUS.ZONE © Virtual Veil Project</footer>
+  <script src="scripts/character-sheet.js"></script>
+</body>
+</html>
