@@ -1390,11 +1390,11 @@
   "id": 1147,
   "name": "RNG",
   "source": "Hatter",
-  "tier": "Rare",
+  "tier": "Common",
   "type": "Buff",
   "tags": ["Luck"],
-  "description": "Select a digit, it becomes your Lucky number. Add one Lucky die from your register if you used it as a part of an Action.",
-  "flavor": "Some events refuse to stay put."
+  "description": "Select a digit, it becomes your Lucky number. Once per turn, Add one Lucky die from your register if you used it as a part of an Action.",
+  "flavor": "Some events refuse to stay put. Stack: the maximum number of Lucky Die a turn increases."
 }
 
 ]
