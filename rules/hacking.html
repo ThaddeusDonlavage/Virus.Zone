@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles.css">
+  <title>VIRUS.ZONE — Digital Hacking</title>
+  <link rel="icon" type="image/x-icon" href="../src/favicon.png">
+</head>
+<body>
+  <div id="header-container"></div>
+  <script src="../load-header.js"></script>
+  <script src="../auto-toc.js"></script>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Digital Hacking</h1>
+      <p>Rules for hacking and exploring the Node Track in the digital network.</p>
+    </section>
+
+    <section class="content">
+      <h2>Node Track Stance</h2>
+      <p>At the start of each turn on the Node Track, the hacker must declare their operational stance for that turn. Cyber and Stealth pools are strictly mutually exclusive and cannot be combined.</p>
+
+      <p>Once your stance is declared, your movement, node interactions, and roll triggers follow that stance for the remainder of the Node Track turn.</p>
+
+      <div class="panel distro" id="panels" aria-label="Hacking Stance">
+        <h3>Turn Start</h3>
+        <p>Declare one of the following stances:</p>
+        <ul>
+          <li><strong>Cyber Action</strong> — Pool: Cyber + Software</li>
+          <li><strong>Stealth Action</strong> — Pool: [Stat] + Stealth</li>
+        </ul>
+      </div>
+
+      <h2>Cyber Action</h2>
+      <p><strong>Purpose:</strong> Brute force, speed, structural disruption, and barrier cracking.</p>
+      <p><strong>Pool:</strong> Cyber + Software</p>
+      <p><strong>Movement:</strong> Move up to your Width in Nodes per turn.</p>
+      <p><strong>Barriers:</strong> Can breach Firewall Barriers (requires Height &ge; Barrier Rating).</p>
+      <p><strong>Risks:</strong> Entering a Hazard Node requires your Height to equal or exceed the Node's Security Rating (SR). Failing this check raises Heat by +1 and halts movement at that Node. Failing to roll any set on a Cyber roll generates +1 Heat from system noise.</p>
+
+      <ul>
+        <li><strong>Cracks Barriers (BR):</strong> Cyber rolls are used to break through Firewall Barrier nodes, using Height against Barrier Rating.</li>
+        <li><strong>Full Speed:</strong> Cyber Actions are optimized for movement and may traverse the full Width allowed by your selected node path.</li>
+        <li><strong>Hazard Entry:</strong> Hazard Nodes still pose a threat during Cyber Actions and can trigger Heat if your Height is insufficient.</li>
+      </ul>
+
+      <h2>Stealth Action</h2>
+      <p><strong>Purpose:</strong> Ghost past security, evade active ICE, and cool system traces.</p>
+      <p><strong>Pool:</strong> [Stat] + Stealth</p>
+      <p><strong>Movement:</strong> Move up to Width in Nodes, but capped at a maximum of 2 Nodes per turn.</p>
+      <p><strong>Hazards:</strong> Automatically bypasses Hazard Nodes (Sensors/Cameras) without triggering alarms or Heat, provided you roll at least any valid set (2xX). You do not need to beat the Node's Security Rating.</p>
+      <p><strong>Barriers:</strong> Cannot breach Barriers or Locks. If you encounter a Barrier Node during a Stealth Action, your movement stops instantly.</p>
+      <p><strong>Ghosting Effect:</strong> Achieving any set on a Stealth roll prevents active Trace IC from lock-tracking your position for that round.</p>
+
+      <ul>
+        <li><strong>Bypasses Sensors (SR):</strong> Stealth Actions are tuned to avoid detection rather than force entry through secured nodes.</li>
+        <li><strong>Speed Capped:</strong> Even if your Width would normally allow more movement, Stealth Actions are limited to 2 Nodes per turn.</li>
+        <li><strong>Barrier Limitation:</strong> Barrier Nodes block Stealth Actions completely, forcing the hacker to choose a different route or switch to Cyber Action on a later turn.</li>
+      </ul>
+
+      <h2>Understanding Nodes</h2>
+      <p><strong>Barrier Node:</strong> A node protected by a Firewall Barrier. Only Cyber Actions can breach Barrier Nodes, and only when Height meets or exceeds the Barrier Rating.</p>
+      <p><strong>Hazard Node:</strong> A node monitored by sensors, cameras, or active security programs. Cyber Actions must beat the node's Security Rating to pass safely, while Stealth Actions can slip past once any valid set is rolled.</p>
+      <p><strong>Heat:</strong> A measure of how much attention your intrusion is attracting. Heat increases when a Cyber Action fails to make a valid set, or when you enter a Hazard Node without sufficient Height. Higher Heat makes future detection and countermeasures more likely.</p>
+
+      <nav class="page-nav">
+        <a class="prev page-nav-prev" href="../rules.html">Go to Rules</a>
+        <a class="next page-nav-next" href="../rules/combat.html">Go to Combat Rules</a>
+      </nav>
+    </section>
+  </main>
+
+  <footer>
+    VIRUS.ZONE © Virtual Veil Project
+  </footer>
+  <script src="../toc.js"></script>
+  <script src="../scripts/go-back.js"></script>
+  <script>
+    if (window.injectGoBack) {
+      window.injectGoBack({ href: '../rules.html', label: 'Rules', placement: 'outside', tocSelector: '#toc-container' });
+    }
+  </script>
+</body>
+</html>
