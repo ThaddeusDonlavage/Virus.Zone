@@ -15,55 +15,75 @@
   <main class="container">
     <section class="hero">
       <h1>Digital Hacking</h1>
-      <p>Rules for hacking and exploring the Node Track in the digital network.</p>
+      <p>Every phone, traffic light, security camera, vending machine, corporate server, and military satellite has one thing in common. They all follow cosmOS.</p>
     </section>
 
     <section class="content">
-      <h2>Node Track Stance</h2>
-      <p>At the start of each turn on the Node Track, the hacker must declare their operational stance for that turn. Cyber and Stealth pools are strictly mutually exclusive and cannot be combined.</p>
+      <h2>Surfing</h2>
+      <p>Whether you're connected through public Wi-Fi, a fiber line, or your own COMP, every system projects itself into the web. A security camera watches a hallway, but it also occupies a place within the cosmOS. Entire office buildings become virtual complexes, complete with its own ecosystem. </p>
+      <P>The practice of navigating digital spaces is known simply as <strong>Surfing.</strong></P>
+      <p>Connecting to the internet will allow a device to traverse through <strong>Nodes</strong>, a word for any meaningful connection location. Others contain valuable data, Chips, hidden software, or strange magical phenomena born from exposure to cosmOS. Some Nodes may often begin to behave unnaturally in the physical world long before anyone realizes something is wrong.</p>
+      <p><strong>Networks</strong> are a series of connected Nodes. Some Networks, mainly exists as crossroads between other networks, while others may maintain valuable data or conceal dangerous secrets.</p>
+      <p>A <strong>Terminal</strong> is a Node capable of projecting an entire cyberspace into the cosmOS. Logging into a Terminal does not grant access to files. It allows a user to enter a defined digital environment, complete with an architecture, environment and inhabitants. A mundane office computer may manifest as a fantasical realm in its alternate form.</p>
 
-      <p>Once your stance is declared, your movement, node interactions, and roll triggers follow that stance for the remainder of the Node Track turn.</p>
+      <h2>Introduction to Hacking</h2>
+        <aside>Hacking is the use of unconventional or illicit means to gain unauthorized access to a digital device, computer system or computer network. - IBM </aside>
+        <p>In the real world, hacking is something often dramatically exaggerated. Often times, one thinks of rapid typing, frantic rapid alerts and high stakes. Real hacking is subtle silent, and takes a lot of legwork and patience.</p>
+       <p>Within Virus.Zone, there is going to be a mix of these things. Many high-tech corporations aware of the Veil may be actively using it to add that very spice into the system. Likewise, any Player will be able to robustly and swiftly race through a secure network with a few moments of grace. Each excursion into Cyber Space is meant to be a Cat and Mouse game, with each host potentially equipped attack any that try to access it.</p>
+        <p><strong>Hacking</strong> means traveling from Node to Node with the added assistance of a COMP, and using it to rapidly search for information, bypassing securities, or operating any devices.</p>      
+        <h3>ICE</h3>
+        <p>anti-virus, security systems, and even the direct actions of a physical user contribute to Intrusion Countermeasure Electronics or <strong>I.C.E.</strong>. While surfing ICE patrol Nodes in a local network, searching for anything that does not belong, and raising alarms much like white blood cells in a bloodstream.</p>
+        <p>ICE, as a manifestation of cosmOS ultimately, and usually only targets those with the know how to enter its systems with the COMP's abilities. Black ICE, more directly is any form of ICE which is powerful enough to kill the user, such as forcing them into a Terminal, physically shocking the hacker, or actively invading their mind.</p>
 
-      <div class="panel distro" id="panels" aria-label="Hacking Stance">
-        <h3>Turn Start</h3>
-        <p>Declare one of the following stances:</p>
-        <ul>
-          <li><strong>Cyber Action</strong> — Pool: Cyber + Software</li>
-          <li><strong>Stealth Action</strong> — Pool: [Stat] + Stealth</li>
-        </ul>
+      <h2>Hacking Gameplay</h2>
+        <h3>Surfing cosmOS</h3>
+        <p>The hacking process must begin with an initial connection. This can be done by scanning in wireless signal, plugging a wire into your COMP, or simply sitting down at a desktop computer. From there you can begin planning out a method of hacking to your target.</p>
+        <h3>Heat</h3>
+        <p>As soon as you use your COMP to begin tampering with a network, you will generate at least one point of Heat, which represents the attention you've drawn from a security system. Put simply, ICE doesn't like Heat. At low Heat, unusual activity is dismissed as transmission errors, maintenance traffic, or harmless glitches. Most automated defenses remain passive, allowing careful surfers to continue hacking unnoticed.</p>
+        <p>You gain one level of Heat for each turn you spend hacking into a system, and on each failed action. Each network typically deploys additional security measures at elevated Heat levels, usually ultimately leading to a full system shutdown and other security measures.</p>
+        <h3>Firewalls</h3>
+        <p>Many devices possess barriers preventing a Hacker from accessing them. Typically each firewall has a set height, meaning that when rolling to bypass them, the height of the roll must meet or exceed the firewall's height.</p>
+        <h2>Actions</h2>
+        <p>Two stats can be used to move from Node to Node while hacking, otherwise the Hacker is assumed to stay logged in and make no extra progress. These are Cyber and Stealth, and their actions are described below.</p>
+
+      <div class="row">
+        <div class="column">
+          <h3>Cyber Action</h3>
+          <p>Traversing Notes with Cyber provides speed and force.</p>
+          <p><strong>Movement:</strong> Move up to your Width in Nodes per turn.</p>
+          <p><strong>Barriers:</strong> Can breach Firewall Barriers (requires Height &ge; Barrier Rating).</p>
+        </div>
+        <div class="column">
+          <h3>Stealth Action</h3>
+          <p>Ghost past security, evade active ICE.</p>
+          <p><strong>Movement:</strong> Move up to Width in Nodes per turn.</p>
+          <p><strong>Barriers:</strong> Cannot breach Firewalls.</p>
+        </div>
       </div>
+      <p><strong>Ghosting Effect:</strong> Achieving any set on a Stealth roll prevents active ICE from tracking your position for that round.</p>
 
-      <h2>Cyber Action</h2>
-      <p><strong>Purpose:</strong> Brute force, speed, structural disruption, and barrier cracking.</p>
-      <p><strong>Pool:</strong> Cyber + Software</p>
-      <p><strong>Movement:</strong> Move up to your Width in Nodes per turn.</p>
-      <p><strong>Barriers:</strong> Can breach Firewall Barriers (requires Height &ge; Barrier Rating).</p>
-      <p><strong>Risks:</strong> Entering a Hazard Node requires your Height to equal or exceed the Node's Security Rating (SR). Failing this check raises Heat by +1 and halts movement at that Node. Failing to roll any set on a Cyber roll generates +1 Heat from system noise.</p>
+      <h2>Example Network Elements</h2>
+      <div class="example-grid">
+        <article class="panel">
+          <h3>Basic Firewall</h3>
+          <p><strong>Role:</strong> You may not pass into or through a Firewall without an Action equal or greater to 7.</p>
+        </article>
 
-      <ul>
-        <li><strong>Cracks Barriers (BR):</strong> Cyber rolls are used to break through Firewall Barrier nodes, using Height against Barrier Rating.</li>
-        <li><strong>Full Speed:</strong> Cyber Actions are optimized for movement and may traverse the full Width allowed by your selected node path.</li>
-        <li><strong>Hazard Entry:</strong> Hazard Nodes still pose a threat during Cyber Actions and can trigger Heat if your Height is insufficient.</li>
-      </ul>
+        <article class="panel">
+          <h3>Router</h3>
+          <p><strong>Role:</strong> Connects multiple Nodes together, usually a least a few Nodes away from everything else.</p>
+        </article>
 
-      <h2>Stealth Action</h2>
-      <p><strong>Purpose:</strong> Ghost past security, evade active ICE, and cool system traces.</p>
-      <p><strong>Pool:</strong> [Stat] + Stealth</p>
-      <p><strong>Movement:</strong> Move up to Width in Nodes, but capped at a maximum of 2 Nodes per turn.</p>
-      <p><strong>Hazards:</strong> Automatically bypasses Hazard Nodes (Sensors/Cameras) without triggering alarms or Heat, provided you roll at least any valid set (2xX). You do not need to beat the Node's Security Rating.</p>
-      <p><strong>Barriers:</strong> Cannot breach Barriers or Locks. If you encounter a Barrier Node during a Stealth Action, your movement stops instantly.</p>
-      <p><strong>Ghosting Effect:</strong> Achieving any set on a Stealth roll prevents active Trace IC from lock-tracking your position for that round.</p>
+        <article class="panel">
+          <h3>ICE Spider</h3>
+          <p><strong>Role:</strong> Moves from one Node at a time, on a routine. On Cyber turns, if the ICE Spider is present in the Node, actions take a -1 penalty.</p>
+        </article>
 
-      <ul>
-        <li><strong>Bypasses Sensors (SR):</strong> Stealth Actions are tuned to avoid detection rather than force entry through secured nodes.</li>
-        <li><strong>Speed Capped:</strong> Even if your Width would normally allow more movement, Stealth Actions are limited to 2 Nodes per turn.</li>
-        <li><strong>Barrier Limitation:</strong> Barrier Nodes block Stealth Actions completely, forcing the hacker to choose a different route or switch to Cyber Action on a later turn.</li>
-      </ul>
-
-      <h2>Understanding Nodes</h2>
-      <p><strong>Barrier Node:</strong> A node protected by a Firewall Barrier. Only Cyber Actions can breach Barrier Nodes, and only when Height meets or exceeds the Barrier Rating.</p>
-      <p><strong>Hazard Node:</strong> A node monitored by sensors, cameras, or active security programs. Cyber Actions must beat the node's Security Rating to pass safely, while Stealth Actions can slip past once any valid set is rolled.</p>
-      <p><strong>Heat:</strong> A measure of how much attention your intrusion is attracting. Heat increases when a Cyber Action fails to make a valid set, or when you enter a Hazard Node without sufficient Height. Higher Heat makes future detection and countermeasures more likely.</p>
+        <article class="panel">
+          <h3>Honeypot</h3>
+          <p><strong>Role:</strong> Appears as an easy to access, high-value Node. Connecting to it directly spawns hostile Sprites.</p>
+        </article>
+      </div>
 
       <nav class="page-nav">
         <a class="prev page-nav-prev" href="../rules.html">Go to Rules</a>
@@ -75,6 +95,25 @@
   <footer>
     VIRUS.ZONE © Virtual Veil Project
   </footer>
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
   <script src="../toc.js"></script>
   <script src="../scripts/go-back.js"></script>
   <script>
